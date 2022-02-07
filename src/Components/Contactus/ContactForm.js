@@ -1,33 +1,33 @@
-import React, { useState } from "react";
+// import React, { useState } from "react";
 import { CTForm, HEADER2, Para, INPUTCT, CTinfordiv, CTsubmitbtn, SpanCT, CTbg } from "./Contactelements";
 
-const FORM_ENDPOINT = ""; // TODO - fill on the later step
+// const FORM_ENDPOINT = ""; // TODO - fill on the later step
 
 const ContactForm = () => {
-  const [submitted, setSubmitted] = useState(false);
-  const handleSubmit = () => {
-    setTimeout(() => {
-      setSubmitted(true);
-    }, 100);
-  };
+  // const [submitted, setSubmitted] = useState(false);
+  // const handleSubmit = () => {
+  //   setTimeout(() => {
+  //     setSubmitted(true);
+  //   }, 100);
+  // };
 
-  if (submitted) {
-    return (
-      <>
-        <h2>Thank you!</h2>
-        <div>We'll be in touch soon.</div>
-      </>
-    );
-  }
+  // if (submitted) {
+  //   return (
+  //     <>
+  //       <h2>Thank you!</h2>
+  //       <div>We'll be in touch soon.</div>
+  //     </>
+  //   );
+  // }
 
   return (
       <>
       <CTForm
 
-      action={FORM_ENDPOINT}
-      onSubmit={handleSubmit}
-      method="POST"
-      target="_blank"
+      // action={FORM_ENDPOINT}
+      // onSubmit={handleSubmit}
+      // method="POST"
+      // target="_blank"
     >
        <HEADER2>CONTACT US</HEADER2>
         <Para type="Name:"><INPUTCT placeholder="Write your name here.."></INPUTCT></Para>

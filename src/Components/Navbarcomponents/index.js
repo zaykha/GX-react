@@ -1,7 +1,7 @@
 import React from 'react';
-import {FaBars} from 'react-icons/fa';
+import {FaBars, FaShoppingCart} from 'react-icons/fa';
 import { Nav, NavbarContainer, NavLogo, Imgicon, MobileIcon, NavMenu, NavItem, NavLinks } from './NavbarElements';
-const Navbar = () => {
+const Navbar = ({togglesidebar}) => {
   return (
      <>
      <Nav>
@@ -11,13 +11,13 @@ const Navbar = () => {
                 <img src={require('../../assets/android-chrome-192x192.png')} alt='logo' width='100px'/>
                 </Imgicon>
             </NavLogo>
-                <MobileIcon>
+                <MobileIcon onClick={togglesidebar}>
                   <FaBars />
                 </MobileIcon>
 
                   <NavMenu>
                     <NavItem>
-                      <NavLinks to='home'>Home</NavLinks>
+                      <NavLinks to='/'>Home</NavLinks>
                     </NavItem>
 
                     <NavItem>
@@ -25,11 +25,15 @@ const Navbar = () => {
                     </NavItem>
 
                     <NavItem>
-                      <NavLinks to='shop'>Shop</NavLinks>
+                      <NavLinks to='productspage'>Shop</NavLinks>
                     </NavItem>
 
                     <NavItem>
                       <NavLinks to='contactUs'>Contact US</NavLinks>
+                    </NavItem>
+
+                    <NavItem>
+                      <NavLinks to='basket'><FaShoppingCart/></NavLinks>
                     </NavItem>
 
                   </NavMenu>          

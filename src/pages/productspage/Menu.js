@@ -13,9 +13,10 @@ const Menu = ({ items }) => {
             <Pdiviteminfo >
               <Pheader>
                 <PH4item>{title}</PH4item>
-                <PH4price >{price} Kyats/25KyatThar</PH4price>
+                <PH4price >{price} Kyats/kg</PH4price>
               </Pheader>
-              <Ppitemtext >{desc}</Ppitemtext>
+              {/* <Ppitemtext >{desc}</Ppitemtext> */}
+              <button>Add to Cart</button>
             </Pdiviteminfo>
           </PArticlemenuitem>
         )

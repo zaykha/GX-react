@@ -101,6 +101,7 @@ export const Pdiviteminfo = styled.div`
 `;
 export const PH4item = styled.h4`
     margin-left: 0.5rem;
+   
 `;
 export const Pheader = styled.header`
     display: flex;
@@ -110,6 +111,8 @@ export const Pheader = styled.header`
 export const PH4price = styled.h4`
     margin-left: 0.8rem;
     color: #c59d5f;
+    display: flex;
+    
 `;
 export const Ppitemtext = styled.p`
     // border: 1px solid green;

@@ -7,19 +7,21 @@ export const HeroContainer = styled.div`
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        // border: 1px solid red;
+        border: 3px solid red;
         height: 90vh;
+        // z-index: 100;
+        top:-80px;
         
 `;
 
 export const ImgHero = styled.img`
 
     position: absolute;
-    top:120px;
+    top:11vh;
     width: 480px;
-    z-index: 2;
-    @media screen and (max-width: 960px){
-        width: 50%;
+    z-index: 0;
+    @media screen and (max-width: 1024px){
+        width: 300px;
     }
     
 `
@@ -32,6 +34,7 @@ export const HeroPhrase = styled.div`
         position:absolute;
         top:40px;
         text-shadow: 1px 2px  black;
+       
     
         @media screen and (max-width: 960px){
         font-size: 22px;
@@ -41,11 +44,12 @@ export const HeroPhrase = styled.div`
 export const HeroBgimg = styled.div`
     position: absolute;
     // border: 1px solid red;
-    top:-150px;
+    top:0px;
     width:100%;
-    height:80vh;
+    height:90vh;
     background: url(${require('../../assets/Herobackground.jpg')}) no-repeat;
     background-size: cover;
+    background-position:center;
     filter: blur(.8px);
 `;
 
@@ -54,7 +58,7 @@ export const Promobutton = styled.button`
     border: none;
     border-radius: 15px;
     box-shadow: 0 0 8px rgb(207, 207, 207);
-    position: relative;
+    position: absolute;
     top: 15px;
     left: 0;
     right: 0;
@@ -95,29 +99,33 @@ display: flex;
 flex-direction: row;
 justify-content: center;
 align-items: center;
-height: 20vh;
-top:0px;
-// border: 1px solid green;
+height: 60vh;
+top:0;
+border: 1px solid green;
 background: rgba(0,0,0,.56);
 z-index: 2;
-
+background: url(${require('../../assets/46769.jpg')}) no-repeat;
+    background-size: cover;
+    background-position:center;
+    // filter: blur(1px);
 
 @media screen and (max-width:960px){
     flex-direction: column;
 }
 `;
 
-export const Aboutbg = styled.div`
-    position: absolute;
-    // border: 1px solid red;
-    margin-bottom: -20vh;
-    top:74vh;
-    width:100%;
-    height:60vh;
-    background: url(${require('../../assets/bg5.jpg')}) no-repeat;
-    background-size: cover;
-    filter: blur(1px);
-`;
+// export const Aboutbg = styled.div`
+//     position: absolute;
+//     // border: 1px solid red;
+//     margin-bottom: -20vh;
+//     top:74vh;
+//     width:100%;
+//     height:60vh;
+//     background: url(${require('../../assets/46769.jpg')}) no-repeat;
+//     background-size: cover;
+//     // filter: blur(1px);
+    
+// `;
 
 export const AboutPhrase = styled.div`
 
@@ -126,7 +134,7 @@ export const AboutPhrase = styled.div`
         font-size:20px;
         position:relative;
         text-shadow: 1px 2px  black;
-        
+        background: rgba(1,1,1,.3);
         @media screen and (max-width: 960px){
         font-size: 16px;
     }

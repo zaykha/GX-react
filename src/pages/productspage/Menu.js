@@ -1,6 +1,9 @@
 import React from 'react'
-import { PSectioncenter, PH4item, PArticlemenuitem, PIMGphoto, Pdiviteminfo, Pheader, PH4price } from './productelements'
-
+import { PSectioncenter, PH4item, PArticlemenuitem, PIMGphoto, Pdiviteminfo, Pheader, PH4price, 
+} from './productelements'
+import './PBtn.css'
+// PAddtocart, PBTNcontainer,
+// PAnc, PSpan
 
 const Menu = ({ items }) => {
   return (
@@ -15,8 +18,27 @@ const Menu = ({ items }) => {
                 <PH4item>{title}</PH4item>
                 <PH4price >{price}<p>{perunit}</p></PH4price>
               </Pheader>
-              
-              <button>Add to Cart</button>
+{/*               
+              <PAddtocart>
+                <PBTNcontainer>
+               <PAnc data-sm-link-text='+'>
+                 <PSpan>Add to Cart</PSpan>
+                </PAnc>
+                </PBTNcontainer>
+                </PAddtocart> */}
+              <div className='buttons'>
+                <div className='container'>
+                  <a href='/' class="btn effect04" data-sm-link-text="+" target="_blank">
+                    <span>Add to Cart</span>
+                  </a>
+                </div>
+
+
+
+              </div>
+
+
+                
             </Pdiviteminfo>
           </PArticlemenuitem>
         )

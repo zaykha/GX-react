@@ -38,6 +38,8 @@ const HeroSection = () => {
         
     
     </HeroContainer>
+
+
     <HeroCarousel
         isMobile={matches}
         handleOpen={handleOpen}
@@ -45,7 +47,7 @@ const HeroSection = () => {
     />
     <AboutContainer>
       <div>
-        <img src={require('../../assets/GXlogo.png')} width='240px' alt='logo'/>
+        <img src={require('../../assets/android-chrome-512x512.png')} width='240px' alt='logo'/>
       </div>
       <AboutPhrase>
         <h1>About Us</h1>
@@ -54,7 +56,7 @@ const HeroSection = () => {
         <a href='/'>More about us!</a>
       </AboutPhrase>
     </AboutContainer>
-    <Aboutbg/>
+    {/* <Aboutbg/> */}
 
 
        </>

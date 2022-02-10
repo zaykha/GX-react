@@ -5,6 +5,9 @@ export const PSection= styled.section`
     margin: 0 auto;
     max-width: 1170px;
     padding: 5rem 0;
+    background-color: rgba(0,0,0,0);
+    position:relative;
+    top:-180px;
 
     @media screen and (min-width: 992px) {
         width: 95vw;
@@ -23,7 +26,7 @@ export const PUnderline = styled.div`
     margin-left: auto;
     margin-right: auto;
 `;
-export const PBTNcontainer = styled.div`
+export const Pcatacontainer = styled.div`
     margin-bottom: 4rem;
     display: flex;
     justify-content: center;
@@ -55,6 +58,7 @@ export const PSectioncenter = styled.section`
     display: grid;
     gap: 3rem 2rem;
     justify-items: center;
+    
 
     @media screen and (min-width:1200px){
         width: 95vw;
@@ -65,6 +69,7 @@ export const PArticlemenuitem = styled.article`
     display: grid;
     gap: 1rem 2rem;
     max-width: 25rem;
+    border: 1px solid black;
 
     @media screen and (min-width: 768px){
         grid-template-columns: 225px 1fr;
@@ -119,3 +124,96 @@ export const Ppitemtext = styled.p`
     margin-bottom: 0;
     // padding-top: 1rem;
 `;
+export const PAddtocart = styled.button`
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+`;
+export const PBTNcontainer = styled.div`
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background-color: #FFF;
+    padding:  40px 0px;
+    width: 240px;
+
+    &:hover{
+        text-decoration: none;
+    }
+`;
+export const PAnc = styled.a`
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 45px;
+    max-width: 160px;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    width: 100%
+
+        --uismLinkDisplay: var(--smLinkDisplay, inline-flex);
+    display: var(--uismLinkDisplay);
+    color: #000;
+    outline: solid  2px #000;
+    position: relative;
+    transition-duration: 0.4s;
+    overflow: hidden;
+
+    &:before {
+        margin: 0 auto;
+        transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+        transition-duration: 0.4s;
+        content: attr(data-sm-link-text);
+        color: #FFF;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+        -webkit-transform: translateY(500%) scale(-0.1,20);
+        transform: translateY(500%) scale(-0.1,20);
+        
+    }
+
+    &:hover{
+        background-color: #000;
+     
+    }
+
+    &:hover:before{
+        letter-spacing: 0.05em;
+        -webkit-transform: translateY(0) scale(1,1);
+                transform: translateY(0) scale(1,1);
+    }
+`;
+export const PSpan = styled.span`
+    margin: 0 auto;
+    transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+    transition-duration: 0.4s;
+
+    &:hover{
+        -webkit-transform: translateY(-400%) scale(-0.1,20);
+        transform: translateY(-400%) scale(-0.1,20);
+    }
+`;
+
+
+export const ImgProduct = styled.img`
+    object-fit:cover;
+    position: relative;
+    top:-80px;
+    width: 100%;
+    height: 25vh;
+    z-index: -2;
+    // @media screen and (max-width: 960px){
+    //     width: 50%;
+    // }
+  `;

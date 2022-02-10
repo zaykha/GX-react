@@ -1,9 +1,9 @@
 import React from 'react';
-import { PBTNcontainer, PButtonfilter } from './productelements';
+import { Pcatacontainer, PButtonfilter } from './productelements';
 
 const Categories = ({ categories, filterItems }) => {
   return (
-    <PBTNcontainer>
+    <Pcatacontainer>
       {categories.map((category, index) => {
         return (
           <PButtonfilter
@@ -15,7 +15,7 @@ const Categories = ({ categories, filterItems }) => {
           </PButtonfilter>
         )
       })}
-    </PBTNcontainer>
+    </Pcatacontainer>
   )
 }
 

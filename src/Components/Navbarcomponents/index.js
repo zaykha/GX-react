@@ -21,19 +21,19 @@ const Navbar = ({togglesidebar}) => {
                     </NavItem>
 
                     <NavItem>
-                      <NavLinks to='about'>About</NavLinks>
+                      <NavLinks to='/about'>About</NavLinks>
                     </NavItem>
 
                     <NavItem>
-                      <NavLinks to='productspage'>Shop</NavLinks>
+                      <NavLinks to='/productspage'>Shop</NavLinks>
                     </NavItem>
 
                     <NavItem>
-                      <NavLinks to='contactUs'>Contact US</NavLinks>
+                      <NavLinks to='/contactUs'>Contact US</NavLinks>
                     </NavItem>
 
                     <NavItem>
-                      <NavLinks to='basket'><FaShoppingCart/></NavLinks>
+                      <NavLinks to='/basket'><FaShoppingCart/></NavLinks>
                     </NavItem>
 
                   </NavMenu>          

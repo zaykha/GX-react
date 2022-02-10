@@ -20,7 +20,7 @@ const HeroCarousel = ({handleOpen, setHandleOpen, isMobile}) => {
         
     >
         <Slide
-            media={ <img src={require('../../assets/Pork.jpg')} alt='Pork set'/>}
+            media={ <img src={require('../../assets/Pork.jpg')} alt='Pork set' />}
             title='Pork Set'
             mediaBackgroundStyle= {{
                 background: 'black',

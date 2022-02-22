@@ -4,6 +4,7 @@ const menu = [
       title: 'Pork Belly',
       category: 'Pork',
       price: 7400,
+      
       img:
       require("../../assets/pork/belly.jpg"),
       perunit: 'Ks/kg'
@@ -13,6 +14,7 @@ const menu = [
       title: 'Pork Leg',
       category: 'Pork',
       price:8500,
+      
       img:
       require("../../assets/pork/leg.jpg"),
       perunit: 'Ks/kg'
@@ -22,6 +24,7 @@ const menu = [
       title: 'Pork Loin',
       category: 'Pork',
       price:  8500,
+      
       img: require("../../assets/pork/loin.jpg"),
       perunit: 'Ks/kg'
     },
@@ -30,6 +33,7 @@ const menu = [
       title: 'Pork Neck',
       category: 'Pork',
       price: 8500,
+      
       img:
       require("../../assets/pork/neck.jpg"),
       perunit: 'Ks/kg'
@@ -39,6 +43,7 @@ const menu = [
       title: 'Pork rib',
       category: 'Pork',
       price: 7400,
+      
       img:
       require("../../assets/pork/rib.jpg"),
       perunit: 'Ks/kg'
@@ -51,6 +56,7 @@ const menu = [
       title: 'Chicken Breast CP',
       category: 'Chicken',
       price: 5000,
+      
       img: require("../../assets/Chicken/ChickenBreastCP.jpg"),
       perunit: 'Ks/kg'
     },
@@ -59,6 +65,7 @@ const menu = [
       title: 'Chicken Thigh CP',
       category: 'Chicken',
       price: 5000,
+      
       img: require("../../assets/Chicken/ChickenThighCP.jpg"),
       perunit: 'Ks/kg'
     },
@@ -67,6 +74,7 @@ const menu = [
       title: 'Chicken Feet CP',
       category: 'Chicken',
       price: 3750 ,
+      
       img: require("../../assets/Chicken/ChickenFeetCP.jpg"),
       perunit: 'Ks/kg'
     },
@@ -75,6 +83,7 @@ const menu = [
       title: 'Chicken Head CP',
       category: 'Chicken',
       price: 3750,
+      
       img: require("../../assets/Chicken/ChickenHeadCP.jpg"),
       perunit: 'Ks/kg'
     },
@@ -83,6 +92,7 @@ const menu = [
         title: 'Chicken Wings CP',
         category: 'Chicken',
         price: 3750,
+        
         img: require("../../assets/Chicken/ChickenWingsCP.jpg"),
         perunit: 'Ks/kg'
       },
@@ -91,6 +101,7 @@ const menu = [
         title: 'Chicken Gizzard CP',
         category: 'Chicken',
         price: 1500,
+        
         img: require("../../assets/Chicken/ChickengizzardCP.jpg"),
         perunit: 'Ks/kg'
       },
@@ -99,6 +110,7 @@ const menu = [
         title: 'Whole Chicken CP',
         category: 'Chicken',
         price: 5000,
+        
         img: require("../../assets/Chicken/WholeChickenCP.jpg"),
         perunit: 'Ks/kg'
       },{
@@ -106,6 +118,7 @@ const menu = [
         title: 'Whole Chicken Burmese',
         category: 'Chicken',
         price: 10500,
+        
         img: require("../../assets/Chicken/WholeChickenBurmese.jpg"),
         perunit: 'Ks/kg'
       },
@@ -116,6 +129,7 @@ const menu = [
         title: 'Ngajin',
         category: 'Seafood',
         price: 6750,
+        
         img: require("../../assets/Seafood/Ngajin.jpg"),
         perunit: 'Ks/kg'
         
@@ -125,6 +139,7 @@ const menu = [
         title: 'NgaMyitchin',
         category: 'Seafood',
         price: 3250,
+        
         img: require("../../assets/Seafood/NgarMyitchin.jpg"),
         perunit: 'Ks/kg'
         
@@ -133,6 +148,7 @@ const menu = [
         title: 'Kakatit',
         category: 'Seafood',
         price: 6750,
+        
         img: require("../../assets/Seafood/kakatit.jpg"),
         perunit: 'Ks/kg'
       },{
@@ -140,6 +156,7 @@ const menu = [
         title: 'Ngakuu',
         category: 'Seafood',
         price: 3750,
+        
         img: require("../../assets/Seafood/Ngakuu.jpg"),
         perunit: 'Ks/kg'
       },{
@@ -147,6 +164,7 @@ const menu = [
         title: 'Ngayant',
         category: 'Seafood',
         price: 8750,
+        
         img: require("../../assets/Seafood/Ngayant.jpg"),
         perunit: 'Ks/kg'
       },{
@@ -154,6 +172,7 @@ const menu = [
         title: 'Ngathalout',
         category: 'Seafood',
         price:13750 ,
+        
         img: require("../../assets/Seafood/Ngathalout.jpg"),
         perunit: 'Ks/kg'
       },{
@@ -161,6 +180,7 @@ const menu = [
         title: 'Crab',
         category: 'Seafood',
         price: 8750,
+        
         img: require("../../assets/Seafood/Crab.jpg"),
         perunit: 'Ks/kg'
       },{
@@ -168,6 +188,7 @@ const menu = [
         title: 'Blue Crab',
         category: 'Seafood',
         price: 12500,
+        
         img: require("../../assets/Seafood/BlueCrab.jpg"),
         perunit: 'Ks/kg'
       },{
@@ -175,6 +196,7 @@ const menu = [
         title: 'Flower Crab',
         category: 'Seafood',
         price: 7500 ,
+        
         img: require("../../assets/Seafood/FlowerCrab.jpg"),
         perunit: 'Ks/kg'
       },{
@@ -182,6 +204,7 @@ const menu = [
         title: 'PuzunHtote',
         category: 'Seafood',
         price: 12500,
+        
         img: require("../../assets/Seafood/PuzunHtote.jpg"),
         perunit: 'Ks/kg'
       },{
@@ -189,6 +212,7 @@ const menu = [
         title: 'PuzunKyawt',
         category: 'Seafood',
         price: 8750,
+        
         img: require("../../assets/Seafood/PuzunKyawt.jpg"),
         perunit: 'Ks/kg'
       },{
@@ -196,6 +220,7 @@ const menu = [
         title: 'Puzunsate',
         category: 'Seafood',
         price: 5000,
+        
         img: require("../../assets/Seafood/Puzunsate.jpg"),
         perunit: 'Ks/kg'
       },{
@@ -203,6 +228,7 @@ const menu = [
         title: 'TigerPrawn',
         category: 'Seafood',
         price: 17500,
+        
         img: require("../../assets/Seafood/TigerPrawn.jpg"),
         perunit: 'Ks/kg'
       },
@@ -213,6 +239,7 @@ const menu = [
         title: 'Beef Tenderloin',
         category: 'Beef',
         price: 13750,
+        
         img: require("../../assets/Beef/BeefTenderloin.jpg"),
         perunit: 'Ks/kg'
       },
@@ -221,6 +248,7 @@ const menu = [
         title: 'Beef Brisket',
         category: 'Beef',
         price: 10000,
+        
         img: require("../../assets/Beef/BeefBrisket.jpg"),
         perunit: 'Ks/kg'
       },
@@ -229,6 +257,7 @@ const menu = [
         title: 'Beef Loin',
         category: 'Beef',
         price: 11250,
+        
         img: require("../../assets/Beef/BeefLoin.jpg"),
         perunit: 'Ks/kg'
       },
@@ -239,6 +268,7 @@ const menu = [
         title: 'LambSpleen',
         category: 'Lamb',
         price: 11250,
+        
         img: require("../../assets/Lamb/LambSpleen.jpg"),
         perunit: 'Ks/kg'
       },
@@ -247,6 +277,7 @@ const menu = [
         title: 'LambLeg',
         category: 'Lamb',
         price: 17500,
+        
         img: require("../../assets/Lamb/LambLeg.jpg"),
         perunit: 'Ks/kg'
       },
@@ -255,6 +286,7 @@ const menu = [
         title: 'Lamb Tenderloin',
         category: 'Lamb',
         price: 18750,
+        
         img: require("../../assets/Lamb/Lambtenderloin.jpg"),
         perunit: 'Ks/kg'
       },
@@ -263,6 +295,7 @@ const menu = [
         title: 'Lamb Chop',
         category: 'Lamb',
         price: 11250,
+        
         img: require("../../assets/Lamb/LambRib.jpg"),
         perunit: 'Ks/kg'
       },
@@ -271,6 +304,7 @@ const menu = [
         title: 'Lamb Brain (per piece)',
         category: 'Lamb',
         price: 1700,
+        
         img: require("../../assets/Lamb/LambBrain.jpg"),
         perunit: '/piece'
       },
@@ -279,6 +313,7 @@ const menu = [
         title: 'Lamb Loin Chop',
         category: 'Lamb',
         price: 18750,
+        
         img: require("../../assets/Lamb/LambLoinChop.jpg"),
         perunit: 'Ks/kg'
       },
@@ -290,6 +325,7 @@ const menu = [
         title: 'Bitter Guard',
         category: 'Vegetable',
         price: 500,
+        
         img: require("../../assets/vegs/bitterguard.jpg"),
         perunit: '/piece'
       },
@@ -298,6 +334,7 @@ const menu = [
         title: 'BoneLoneThee',
         category: 'Vegetable',
         price: 400,
+        
         img: require("../../assets/vegs/BoneLoneThee.jpg"),
         perunit: '/piece'
       },
@@ -306,6 +343,7 @@ const menu = [
         title: 'BooThee',
         category: 'Vegetable',
         price: 1500,
+        
         img: require("../../assets/vegs/BooThee.jpg"),
         perunit: '/piece'
       },
@@ -314,6 +352,7 @@ const menu = [
         title: 'Chinese Cabbage',
         category: 'Vegetable',
         price: 500,
+        
         img: require("../../assets/vegs/ChineseCabbage.jpg"),
         perunit: '/bud'
       },
@@ -322,6 +361,7 @@ const menu = [
         title: 'Cucumber',
         category: 'Vegetable',
         price: 300,
+        
         img: require("../../assets/vegs/Cucumber.jpg"),
         perunit: '/piece'
       },
@@ -330,6 +370,7 @@ const menu = [
         title: 'EggPlant',
         category: 'Vegetable',
         price: 300,
+        
         img: require("../../assets/vegs/EggPlant.jpg"),
         perunit: '/piece'
       },
@@ -338,6 +379,7 @@ const menu = [
         title: 'Savoy Cabbage',
         category: 'Vegetable',
         price: 2000,
+        
         img: require("../../assets/vegs/SavoyCabbage.jpg"),
         perunit: '/bud'
       },
@@ -346,6 +388,7 @@ const menu = [
         title: 'Broccoli',
         category: 'Vegetable',
         price: 1200,
+        
         img: require("../../assets/vegs/Broccoli.jpg"),
         perunit: '/bud'
       },
@@ -354,6 +397,7 @@ const menu = [
         title: 'Green Chilli',
         category: 'Vegetable',
         price: 300,
+        
         img: require("../../assets/vegs/GreenChilli.jpg"),
         perunit: '/100g'
       },
@@ -362,6 +406,7 @@ const menu = [
         title: 'Hin Nu Nwal',
         category: 'Vegetable',
         price: 300,
+        
         img: require("../../assets/vegs/HinNuNwal.jpg"),
         perunit: '/bundle'
       },
@@ -370,6 +415,7 @@ const menu = [
         title: 'Ga Zoon Yuat',
         category: 'Vegetable',
         price: 300,
+        
         img: require("../../assets/vegs/GazoonYuat.jpg"),
         perunit: '/bundle'
       },
@@ -378,6 +424,7 @@ const menu = [
         title: 'Lemon',
         category: 'Vegetable',
         price: 500,
+        
         img: require("../../assets/vegs/Lemon.jpg"),
         perunit: '/piece'
       },
@@ -386,6 +433,7 @@ const menu = [
         title: 'Lime',
         category: 'Vegetable',
         price: 100 ,
+        
         img: require("../../assets/vegs/Lime.jpg"),
         perunit: '/piece'
       },
@@ -394,6 +442,7 @@ const menu = [
         title: 'Carrot',
         category: 'Vegetable',
         price: 300,
+        
         img: require("../../assets/vegs/Carrot.jpg"),
         perunit: '/100g'
       },
@@ -402,6 +451,7 @@ const menu = [
         title: 'White Carrot',
         category: 'Vegetable',
         price: 500,
+        
         img: require("../../assets/vegs/WhiteCarrot.jpg"),
         perunit: '/bundle'
       },
@@ -410,6 +460,7 @@ const menu = [
         title: 'Coriander',
         category: 'Vegetable',
         price: 200,
+        
         img: require("../../assets/vegs/Coriander.jpg"),
         perunit: '/bundle'
       },
@@ -418,6 +469,7 @@ const menu = [
         title: 'Bean Sprout',
         category: 'Vegetable',
         price: 250,
+        
         img: require("../../assets/vegs/BeanSprout.jpg"),
         perunit: '/100g'
       },
@@ -426,6 +478,7 @@ const menu = [
         title: 'Mint Leaf',
         category: 'Vegetable',
         price: 300,
+        
         img: require("../../assets/vegs/MintLeaves.jpg"),
         perunit: '/bundle'
       },
@@ -434,6 +487,7 @@ const menu = [
         title: 'CauliFlower',
         category: 'Vegetable',
         price: 1500,
+        
         img: require("../../assets/vegs/CauliFlower.jpg"),
         perunit: '/piece'
       },
@@ -442,6 +496,7 @@ const menu = [
         title: 'Pumpkin',
         category: 'Vegetable',
         price: 300,
+        
         img: require("../../assets/vegs/Pumpkin.jpg"),
         perunit: '/100g'
       },
@@ -450,6 +505,7 @@ const menu = [
         title: 'BokChoi',
         category: 'Vegetable',
         price: 250,
+        
         img: require("../../assets/vegs/BokChoi.jpg"),
         perunit: '/bundle'
       },
@@ -458,6 +514,7 @@ const menu = [
         title: 'Cilantro',
         category: 'Vegetable',
         price: 200,
+        
         img: require("../../assets/vegs/Cilantro.jpg"),
         perunit: '/bundle'
       },
@@ -466,6 +523,7 @@ const menu = [
         title: 'Tomato',
         category: 'Vegetable',
         price: 200 ,
+        
         img: require("../../assets/vegs/Tomato.jpg"),
         perunit: '/100g'
       },
@@ -474,6 +532,7 @@ const menu = [
         title: 'Lady Finger',
         category: 'Vegetable',
         price: 100,
+        
         img: require("../../assets/vegs/LadyFinger.jpg"),
         perunit: '/5pieces'
       },

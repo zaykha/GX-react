@@ -1,0 +1,12 @@
+.hidden{
+    display: none;
+}
+
+.addedtobsk{
+    box-shadow: 2px 3px rgb(0, 0, 0);
+   
+}
+
+.normalbsk{
+    box-shadow: 1.5px 1.5px gray;
+}

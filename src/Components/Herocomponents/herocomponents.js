@@ -7,10 +7,12 @@ export const HeroContainer = styled.div`
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        border: 3px solid red;
+        // border: 3px solid red;
+        width:100%;
         height: 90vh;
         // z-index: 100;
         top:-80px;
+        margin-bottom:0;
         
 `;
 
@@ -27,17 +29,19 @@ export const ImgHero = styled.img`
 `
 
 
-export const HeroPhrase = styled.div`
+export const HeroPhrase = styled.h1`
         z-index: 1;
         color: white;
         font-size:46px;
         position:absolute;
-        top:40px;
+        top:60px;
         text-shadow: 1px 2px  black;
        
     
         @media screen and (max-width: 960px){
         font-size: 22px;
+        top: 80px;
+        font-size: 1.8rem;
     }
 `;
 
@@ -45,12 +49,21 @@ export const HeroBgimg = styled.div`
     position: absolute;
     // border: 1px solid red;
     top:0px;
+    margin-top:0;
     width:100%;
     height:90vh;
     background: url(${require('../../assets/Herobackground.jpg')}) no-repeat;
     background-size: cover;
     background-position:center;
+    clip-path: ellipse(84% 100% at 52.38% 0%);
     filter: blur(.8px);
+
+        @media screen and (max-width: 960px){
+            clip-path: ellipse(132% 100% at 55.74% 0%);
+            background: url(${require('../../assets/Herobgmobile.jpg')}) no-repeat;
+            background-size: cover;
+            // background-position: center;
+        }
 `;
 
 
@@ -100,8 +113,8 @@ flex-direction: row;
 justify-content: center;
 align-items: center;
 height: 60vh;
-top:0;
-border: 1px solid green;
+top:-80px;
+// border: 1px solid green;
 background: rgba(0,0,0,.56);
 z-index: 2;
 background: url(${require('../../assets/46769.jpg')}) no-repeat;
@@ -138,4 +151,14 @@ export const AboutPhrase = styled.div`
         @media screen and (max-width: 960px){
         font-size: 16px;
     }
+`;
+
+export const Aboutlogo = styled.img`
+    position: relative;
+    width: 240px;
+
+    @media screen and (max-width: 960px){
+        width: 150px;
+    }
+
 `;

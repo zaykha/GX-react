@@ -1,5 +1,5 @@
 // import React, { useState } from "react";
-import { CTForm, HEADER2, Para, INPUTCT, CTinfordiv, CTsubmitbtn, SpanCT, CTbg } from "./Contactelements";
+import { CTForm, HEADER2, Para, INPUTCT, CTinfordiv, CTsubmitbtn, SpanCT, CTContainer } from "./Contactelements";
 
 // const FORM_ENDPOINT = ""; // TODO - fill on the later step
 
@@ -21,7 +21,7 @@ const ContactForm = () => {
   // }
 
   return (
-      <>
+      <CTContainer>
       <CTForm
 
       // action={FORM_ENDPOINT}
@@ -41,8 +41,8 @@ const ContactForm = () => {
         </CTinfordiv>
     
     </CTForm>
-    <CTbg/>
-    </>
+    
+    </CTContainer>
   );
 };
 

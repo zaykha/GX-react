@@ -46,7 +46,7 @@ export const Imgicon= styled.div`
     left: 0px;
     // background: white;
     &:hover{
-        color:#fff;
+        color:#000;
     }
     // border: 1px solid red;
 `;
@@ -62,7 +62,7 @@ export const MobileIcon = styled.div`
         transform: translate(-100%, 60%);
         font-size: 1.8rem;
         cursor: pointer;
-        color: black;
+        color: white;
     }
 `
 export const NavMenu = styled.ul`

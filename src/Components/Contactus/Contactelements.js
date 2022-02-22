@@ -2,7 +2,12 @@ import styled from "styled-components";
 
 export const CTContainer = styled.div`
     position: relative;
-
+    background: url(${require('../../assets/bg2.jpg')}) no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    top: -80px;
+    margin-bottom: 0;
+    border-top: 4px solid black;
 `;
 export const INPUTCT = styled.input`
     width:100%;
@@ -23,21 +28,22 @@ export const INPUTCT = styled.input`
 
 
 export const CTForm = styled.form`
+    position: relative;
     width:340px;
     height:440px;
     background:#e6e6e6;
     border-radius:8px;
     box-shadow:0 0 40px -10px #000;
-    margin: 250px  auto 150px auto;
+    margin: 100px auto;
     padding:20px 30px;
     max-width:calc(100vw - 40px);
     box-sizing:border-box;
     font-family:'Montserrat',sans-serif;
     position:relative;
-    top: 50px;
-    // ${INPUTCT}:focus &{
-    //     border-bottom:2px solid #78788c;
-    //   }
+    // top: 50px;
+    ${INPUTCT}:focus &{
+        border-bottom:2px solid #78788c;
+      }
 `;
 
 export const HEADER2 = styled.h2`
@@ -97,7 +103,7 @@ export const CTbg = styled.div`
     position: absolute;
     // border: 1px solid red;
     z-index: -1;
-    top:220vh;
+    // top:220vh;
     width:100%;
     height:60vh;
     background: url(${require('../../assets/bg2.jpg')}) no-repeat;

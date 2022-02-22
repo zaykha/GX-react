@@ -1,50 +1,92 @@
-import React from 'react'
-import { PSectioncenter, PH4item, PArticlemenuitem, PIMGphoto, Pdiviteminfo, Pheader, PH4price, 
-} from './productelements'
-import './PBtn.css'
-// PAddtocart, PBTNcontainer,
-// PAnc, PSpan
+import React,{useState} from 'react';
+import { PSectioncenter, PH4item, PArticlemenuitem, PIMGphoto, Pdiviteminfo, Pheader,
+   PH4price, Plusbutton, Minusbutton, Addtocartbtn, Flexdiv, FAcartcss, Flexbox, TTLdisplay
+} from './productelements';
+import './p.css';
+import {  FaBan, FaCheck } from 'react-icons/fa';
 
-const Menu = ({ items }) => {
+
+
+const Menu = (props) => {
+  const {items, basket, onAdd, onRemove, ondelete} = props;
+  
+  const [itemIndex, setitemIndex] = useState(0);
+  
+  const [hover, sethover] =useState(true);
+  const togglehover = ()=>{
+    sethover(!hover);
+  }
+ 
+  
   return (
     <PSectioncenter>
+
       {items.map((menuItem) => {
         const { id, title, img, price, perunit } = menuItem
+        const exist = basket.find((x) => x.id === menuItem.id);
+        
         return (
-          <PArticlemenuitem key={id} >
+          <PArticlemenuitem key={id} 
+          className={exist?'addedtobsk':'normalbsk'}
+           >
             <PIMGphoto src={img} alt={title}  />
             <Pdiviteminfo >
               <Pheader>
                 <PH4item>{title}</PH4item>
-                <PH4price >{price}<p>{perunit}</p></PH4price>
+        
+                <PH4price >{price}{perunit}</PH4price>
               </Pheader>
-{/*               
-              <PAddtocart>
-                <PBTNcontainer>
-               <PAnc data-sm-link-text='+'>
-                 <PSpan>Add to Cart</PSpan>
-                </PAnc>
-                </PBTNcontainer>
-                </PAddtocart> */}
-              <div className='buttons'>
-                <div className='container'>
-                  <a href='/' class="btn effect04" data-sm-link-text="+" target="_blank">
-                    <span>Add to Cart</span>
-                  </a>
-                </div>
 
+           
+           
+             {exist?
+              (<>
+                <Flexdiv>
+                <Plusbutton onClick={()=> onAdd(menuItem)}>+</Plusbutton>
+                <h3>{exist.qty}</h3>
+                <Minusbutton onClick={()=> onRemove(menuItem)}>-</Minusbutton>
+                </Flexdiv>
+                <Flexbox>{menuItem.price * exist.qty} Kyats</Flexbox>
 
-
-              </div>
-
-
-                
+                <FAcartcss
+                onMouseEnter={togglehover} 
+                onMouseLeave={togglehover}
+                onClick={
+                  ()=>{
+                    ondelete(menuItem);
+                    sethover(false);
+                  }}
+                >
+                  
+                  {hover?
+                  <FaBan  />:
+                  <FaCheck/>}
+                </FAcartcss>
+                </> 
+                )       
+             :
+             (
+              <Addtocartbtn
+              className={exist?'hidden':null}
+              onClick={()=>{
+                onAdd(menuItem);
+                sethover(false);
+              }}
+             >
+                Add to cart
+             </Addtocartbtn>)
+             }
+   
             </Pdiviteminfo>
+            
           </PArticlemenuitem>
         )
+       
       })}
+    
     </PSectioncenter>
   )
 }
 
 export default Menu
+

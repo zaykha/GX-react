@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link as LinkR } from "react-router-dom";
 
 export const PSection= styled.section`
     width: 90vw;
@@ -30,6 +31,11 @@ export const Pcatacontainer = styled.div`
     margin-bottom: 4rem;
     display: flex;
     justify-content: center;
+    
+    @media screen and (max-width: 960px){
+        display: none;
+
+    }
 `;
 export const PButtonfilter = styled.button`
     background: transparent;
@@ -67,32 +73,46 @@ export const PSectioncenter = styled.section`
 `;
 export const PArticlemenuitem = styled.article`
     display: grid;
-    gap: 1rem 2rem;
-    max-width: 25rem;
-    border: 1px solid black;
-
-    @media screen and (min-width: 768px){
-        grid-template-columns: 225px 1fr;
+    width: 480px;
+    height: 153px;
+    
+    border-radius: 5px;
+    background: url(${require('../../assets/bg4.jpg')}) no-repeat;
+    background-size: cover;
+    background-position:center;
+    grid-template-columns: 225px 1fr;
         gap: 0 1.25rem;
-        max-width: 40rem;
+
+    @media screen and (max-width: 768px){
+        grid-template-rows: 1fr 1fr ;
+        grid-template-columns: 244px;
+        gap: 1rem 2rem;
+      width:243px;
+      height:auto;
+      background: url(${require('../../assets/bg8.jpg')}) no-repeat;
+      background-size: cover;
+      background-position:center;
+      color: white;
+      text-shadow: 1px 1px 1px black;
     }
 `;
 
 export const PIMGphoto = styled.img`
     object-fit: cover;
-    height: 200px;
-    width: 100%;
-    border: 0.25rem solid #c59d5f;
+    height: 150px;
+    width: 240px;
+    border: 1px solid black;
+    box-shadow:2px 2px black;
     border-radius: 0.25rem;
     display: block;
 
-    @media screen and (min-width:768px){
-        height: 175px;
-    }
+    // @media screen and (min-width:768px){
+    //     height: 175px;
+    // }
 
-    @media screen and (min-width: 1200px){
-        height: 150px;
-    }
+    // @media screen and (min-width: 1200px){
+    //     height: 150px;
+    // }
 `;
 
 export const Pdiviteminfo = styled.div`
@@ -106,11 +126,16 @@ export const Pdiviteminfo = styled.div`
 `;
 export const PH4item = styled.h4`
     margin-left: 0.5rem;
+    width: 50%;
    
 `;
 export const Pheader = styled.header`
     display: flex;
-    margin-bottom: 0.5rem;
+    margin: 20px 10px;
+    box-sizing: border-box;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
     // border: 1px solid red;
 `;
 export const PH4price = styled.h4`
@@ -217,3 +242,124 @@ export const ImgProduct = styled.img`
     //     width: 50%;
     // }
   `;
+
+export const Plusbutton = styled.button`
+    position: relative;
+    width: 25px;
+    border-radius: 50%;
+    cursor: pointer;
+
+    margin: auto;
+    border:none;
+    box-shadow: 1.5px 1.5px black;
+    background-color: orange;
+
+    &:hover{
+        box-shadow: 1px 1px black;
+}
+
+}
+`;
+export const Flexbox = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+`;
+
+export const Minusbutton = styled.button`
+    position: relative;
+    width: 25px;
+    border-radius: 50%;
+    cursor: pointer;
+    
+    margin: auto;
+    border:none;
+    box-shadow: 1.5px 1.5px black;
+    background-color: orange;
+
+    &:hover{
+        box-shadow: 1px 1px black;
+    }
+   
+`;
+
+export const Addtocartbtn = styled.button`
+    position: relative;
+    width:120px;
+    height: 34px;
+    cursor: pointer;
+    margin:  auto;
+    border:none;
+    box-shadow: 1.5px 1.5px black;
+    background-color: orange;
+
+    &:hover{
+        box-shadow: 1px 1px black;
+    }
+`;
+
+export const Flexdiv = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 20px;
+    margin:  auto;
+    // border: 1px solid red;
+    
+`;
+
+export const FAcartcss = styled.div`
+   position:relative;
+   top: -132px;
+   right: -215px;
+   color: white;
+   width: 40px;
+   height: 30px;
+   border-radius: 4px;
+    background-color: orange;
+    box-shadow: 1.5px 1.5px black;
+   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    
+    &:hover{
+        box-shadow: 1px 1px black;
+        background-color: red;
+    }
+`;
+
+export const TTLdisplay = styled.div`
+    position: sticky;
+    top: 0;
+    // border: 1px solid red;
+    text-align: center;
+    margin: 20px auto;
+    background-color: rgba(0,0,0,0.2);
+    width: 100%;
+    height: 30px;
+    color: black;
+    z-index: 4;
+    font-size: 1.2rem;
+    text-shadow: 1px 1px 1px black;
+
+    @media screen and (max-width: 768px){
+        text-align: left;
+    }
+`;
+
+export const Checkoutdiv = styled(LinkR)`
+    position: absolute;
+    right:0;
+    top: 5px;
+    color: green;
+    cursor: pointer;
+    text-decoration: none;
+
+
+     &:hover{
+         color: red;
+     }
+`;

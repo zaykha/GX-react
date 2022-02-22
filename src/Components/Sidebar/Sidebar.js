@@ -15,19 +15,19 @@ const Sidebar = ({togglesidebar, isOpen}) => {
                     Home
                 </SidebarLink>
 
-                <SidebarLink to='About' onClick={togglesidebar}>
+                <SidebarLink to='/About' onClick={togglesidebar}>
                     About
                 </SidebarLink>
 
-                <SidebarLink to='Shop' onClick={togglesidebar}>
+                <SidebarLink to='/productspage' onClick={togglesidebar}>
                     Shop
                 </SidebarLink>
 
-                <SidebarLink to='contactUs' onClick={togglesidebar}>
+                <SidebarLink to='/contactUs' onClick={togglesidebar}>
                     ContactUs
                 </SidebarLink>
 
-                <SidebarLink to='Cart' onClick={togglesidebar}>
+                <SidebarLink to='/cart' onClick={togglesidebar}>
                     Cart
                 </SidebarLink>
             </SidebarMenu>

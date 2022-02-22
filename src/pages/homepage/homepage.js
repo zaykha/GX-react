@@ -6,10 +6,10 @@ import SimpleReactFooter from "simple-react-footer";
 import Landingproducts from '../../Components/Landingproducts/landingproducts';
 import Sidebar from '../../Components/Sidebar/Sidebar';
 import { useState } from 'react';
-
+import Footer from '../../Components/Footer/Footer';
 
 const Homepage = () => {
-    const description = "According to wikipedia, the cat (Felis catus) is a domestic species of small carnivorous mammal. It is the only domesticated species in the family Felidae and is often referred to as the domestic cat to distinguish it from the wild members of the family. A cat can either be a house cat, a farm cat or a feral cat; the latter ranges freely and avoids human contact.";
+    const description = "Welcome to Gourmet Express";
     const title = "Gourmet Express";
     const columns = [
       {
@@ -74,7 +74,8 @@ const Homepage = () => {
      <HeroSection/>
      <Landingproducts/>
      <ContactForm />
-     <SimpleReactFooter 
+     <Footer/>
+     {/* <SimpleReactFooter 
            description={description} 
            title={title}
            columns={columns}
@@ -89,7 +90,7 @@ const Homepage = () => {
            backgroundColor="black"
            fontColor="white"
            copyrightColor="darkgrey"
-     />;
+     /> */}
      </div>
     );
 };

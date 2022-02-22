@@ -1,7 +1,7 @@
 import React,{useState} from 'react';
 import HeroCarousel from './herocarousel';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
-import { Aboutbg, AboutPhrase, AboutContainer, HeroBgimg, HeroContainer, HeroPhrase, ImgHero, Promobutton, PromobuttonAtag } from './herocomponents';
+import { Aboutbg, AboutPhrase, AboutContainer, HeroBgimg, HeroContainer, Aboutlogo, HeroPhrase, ImgHero, Promobutton, PromobuttonAtag } from './herocomponents';
 
 
 
@@ -19,7 +19,7 @@ const HeroSection = () => {
   <>
     <HeroContainer>
     <HeroPhrase>
-        <h1>GOURMET EXPRESS</h1>
+        GOURMET EXPRESS
     </HeroPhrase>
 
 
@@ -35,11 +35,7 @@ const HeroSection = () => {
       </PromobuttonAtag>
     
   </Promobutton>
-        
-    
     </HeroContainer>
-
-
     <HeroCarousel
         isMobile={matches}
         handleOpen={handleOpen}
@@ -47,7 +43,7 @@ const HeroSection = () => {
     />
     <AboutContainer>
       <div>
-        <img src={require('../../assets/android-chrome-512x512.png')} width='240px' alt='logo'/>
+        <Aboutlogo src={require('../../assets/android-chrome-512x512.png')} alt='logo'/>
       </div>
       <AboutPhrase>
         <h1>About Us</h1>

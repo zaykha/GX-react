@@ -21,7 +21,7 @@ const Navbar = ({togglesidebar}) => {
                     </NavItem>
 
                     <NavItem>
-                      <NavLinks to='/about'>About</NavLinks>
+                      <NavLinks to='/About'>About</NavLinks>
                     </NavItem>
 
                     <NavItem>
@@ -33,7 +33,7 @@ const Navbar = ({togglesidebar}) => {
                     </NavItem>
 
                     <NavItem>
-                      <NavLinks to='/basket'><FaShoppingCart/></NavLinks>
+                      <NavLinks to='/cart'><FaShoppingCart/></NavLinks>
                     </NavItem>
 
                   </NavMenu>          

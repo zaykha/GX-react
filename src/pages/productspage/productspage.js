@@ -2,12 +2,13 @@ import React, {useState} from 'react';
 import Menu from './Menu';
 import Categories from './Catagories';
 import items from './data';
-import { Checkoutdiv, ImgProduct, PSection, PTitle, PUnderline, TTLdisplay } from './productelements';
+import { Pdiv, Checkoutdiv, ImgProduct, PSection, PTitle, PUnderline, TTLdisplay } from './productelements';
 import Navbar from '../../Components/Navbarcomponents';
 import Sidebar from '../../Components/Sidebar/Sidebar';
 import Categoriesmobile from './Catagoriesmobile';
 import Footer from '../../Components/Footer/Footer';
 import { FaArrowRight, FaCartArrowDown } from 'react-icons/fa';
+
 
 
 const allCategories = ['all', ...new Set(items.map((item) => item.category))]
@@ -42,10 +43,12 @@ const Productspage = (props) => {
 
       <Sidebar isOpen={isOpen} togglesidebar={togglesidebar}/>
        <Navbar togglesidebar={togglesidebar}/>
+       <Pdiv>
        <ImgProduct src={require('../../assets/bg3.jpg')} alt='heromeat'/>
+       
       <PSection>
         <PTitle>
-          <h2>Our Products</h2>
+          Our Products
           <PUnderline/>
         </PTitle>
        
@@ -57,6 +60,7 @@ const Productspage = (props) => {
         
         <Menu items={menuItems} ondelete={ondelete} basket={basket} onAdd={onAdd} onRemove={onRemove}/>
       </PSection>
+      </Pdiv>
       <Footer/>
       
   

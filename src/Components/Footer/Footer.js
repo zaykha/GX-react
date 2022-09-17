@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaFacebook, FaInstagram, FaTwitter, FaViber, FaTelegram } from 'react-icons/fa';
-import { Ftopcompartment, Footercontainer, Fcontent, FCopyright, Frow, Fbg } from './Footercomponent';
+import { FATag, Ftopcompartment, Footercontainer, Fcontent, FCopyright, Frow, Fbg } from './Footercomponent';
 
 const Footer = () => {
   return (
@@ -8,10 +8,10 @@ const Footer = () => {
         <Ftopcompartment>
             <Fcontent>
                 <h1>Gourmet Express</h1>
-                <p>About Us</p>
-                <p>Career</p>
-                <a href='/'>Terms and condition</a>
-                <a href='/'>Licenses</a>
+                <FATag to='/about'>About Us</FATag>
+                <FATag to='/'>Career</FATag>
+                <FATag to='/'>Terms and condition</FATag>
+                <FATag to='/'>Licenses</FATag>
             </Fcontent>
             <Fcontent>
                 <h1>CONTACT</h1>
@@ -33,7 +33,7 @@ const Footer = () => {
             </Fcontent>
         </Ftopcompartment>
         <FCopyright>All rights reserved <span>&#169;</span>Gourmet Express. </FCopyright>
-        <Fbg src={require('../../assets/footerblack.png')} />
+        {/* <Fbg src={require('../../assets/footerblack.png')} /> */}
     </Footercontainer>
   )
 }

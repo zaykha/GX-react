@@ -28,12 +28,12 @@ const Navbar = ({togglesidebar}) => {
                       <NavLinks to='/productspage'>Shop</NavLinks>
                     </NavItem>
 
-                    <NavItem>
+                    {/* <NavItem>
                       <NavLinks to='/contactUs'>Contact US</NavLinks>
-                    </NavItem>
+                    </NavItem> */}
 
                     <NavItem>
-                      <NavLinks to='/cart'><FaShoppingCart/></NavLinks>
+                      <NavLinks to='/cart'>Cart</NavLinks>
                     </NavItem>
 
                   </NavMenu>          

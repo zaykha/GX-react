@@ -35,8 +35,8 @@ export const Cartflexdiv = styled.div`
     width: 80%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    margin: 20px auto;
+    justify-content: space-around;
+    margin: 10px auto;
     // border: 1px solid green;
 `;
 export const CartSummarydiv = styled.div`
@@ -53,6 +53,7 @@ export const CartTotaldiv = styled.div`
     justify-content: space-between;
     margin: 20px auto;
     border-top: 2px solid gray;
+    padding-top: 6px;
     color: green;
     font-size: 1.2rem;
     font-weight: bold;
@@ -93,4 +94,30 @@ export const CartButton = styled.button`
         width: 60%;
         margin: 0;
     }
+`;
+
+export const AdjustBtn = styled.button`
+    width: 40px;
+    border-radius: 10%;
+    margin: 10px;
+    background: transparent;
+    border: 1px solid black;
+    // box-shadow: 1px 1px 1px black;
+    :hover{
+        color: white;
+        background: black;
+        cursor: pointer;
+    }
+`; 
+
+export const Cartinput = styled.input`
+    
+    // padding: 5px;    
+     font-size: 16px;
+     border-width: 0px;
+     border-color: transparent;
+     background-color: transparent;
+     color: #000000;
+     pointer-events: none;
+     
 `;

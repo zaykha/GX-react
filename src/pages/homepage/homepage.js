@@ -2,7 +2,6 @@ import React from 'react';
 import Navbar from '../../Components/Navbarcomponents';
 import ContactForm from '../../Components/Contactus/ContactForm';
 import HeroSection from '../../Components/Herocomponents';
-import SimpleReactFooter from "simple-react-footer";
 import Landingproducts from '../../Components/Landingproducts/landingproducts';
 import Sidebar from '../../Components/Sidebar/Sidebar';
 import { useState } from 'react';

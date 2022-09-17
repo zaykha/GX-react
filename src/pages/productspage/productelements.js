@@ -1,6 +1,11 @@
 import styled from "styled-components";
 import { Link as LinkR } from "react-router-dom";
 
+export const Pdiv= styled.div`
+    width: 100%;
+    background: #000;
+`
+
 export const PSection= styled.section`
     width: 90vw;
     margin: 0 auto;
@@ -8,7 +13,7 @@ export const PSection= styled.section`
     padding: 5rem 0;
     background-color: rgba(0,0,0,0);
     position:relative;
-    top:-180px;
+    top:-120px;
 
     @media screen and (min-width: 992px) {
         width: 95vw;
@@ -17,13 +22,16 @@ export const PSection= styled.section`
 
 export const PTitle= styled.div`
     text-align: center;
-    margin-bottom: 2rem;
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: white;
 `;
 
 export const PUnderline = styled.div`
-    width: 5rem;
+    width: 7rem;
     height: 0.25rem;
     background: #c59d5f;
+    margin-top: 12px;
     margin-left: auto;
     margin-right: auto;
 `;
@@ -237,7 +245,7 @@ export const ImgProduct = styled.img`
     top:-80px;
     width: 100%;
     height: 25vh;
-    z-index: -2;
+    z-index: 4;
     // @media screen and (max-width: 960px){
     //     width: 50%;
     // }
@@ -275,7 +283,7 @@ export const Minusbutton = styled.button`
     margin: auto;
     border:none;
     box-shadow: 1.5px 1.5px black;
-    background-color: orange;
+    background-color: #fbae1a;
 
     &:hover{
         box-shadow: 1px 1px black;
@@ -291,7 +299,7 @@ export const Addtocartbtn = styled.button`
     margin:  auto;
     border:none;
     box-shadow: 1.5px 1.5px black;
-    background-color: orange;
+    background-color: #fbae1a;
 
     &:hover{
         box-shadow: 1px 1px black;
@@ -317,7 +325,7 @@ export const FAcartcss = styled.div`
    width: 40px;
    height: 30px;
    border-radius: 4px;
-    background-color: orange;
+    background-color: #fbae1a;
     box-shadow: 1.5px 1.5px black;
    
     display: flex;
@@ -337,10 +345,11 @@ export const TTLdisplay = styled.div`
     // border: 1px solid red;
     text-align: center;
     margin: 20px auto;
-    background-color: rgba(0,0,0,0.2);
+    background-color: rgba(0,0,0,0.8);
     width: 100%;
     height: 30px;
-    color: black;
+    color: #fbae1a;
+    margin: 0 auto 40px auto;
     z-index: 4;
     font-size: 1.2rem;
     text-shadow: 1px 1px 1px black;
@@ -354,12 +363,12 @@ export const Checkoutdiv = styled(LinkR)`
     position: absolute;
     right:0;
     top: 5px;
-    color: green;
+    color: #fbae1a;
     cursor: pointer;
     text-decoration: none;
 
 
      &:hover{
-         color: red;
+         color: green;
      }
 `;

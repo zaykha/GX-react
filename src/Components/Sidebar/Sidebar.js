@@ -23,9 +23,9 @@ const Sidebar = ({togglesidebar, isOpen}) => {
                     Shop
                 </SidebarLink>
 
-                <SidebarLink to='/contactUs' onClick={togglesidebar}>
+                {/* <SidebarLink to='/contactUs' onClick={togglesidebar}>
                     ContactUs
-                </SidebarLink>
+                </SidebarLink> */}
 
                 <SidebarLink to='/cart' onClick={togglesidebar}>
                     Cart

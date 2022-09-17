@@ -2,12 +2,15 @@ import styled from "styled-components";
 
 export const CTContainer = styled.div`
     position: relative;
-    background: url(${require('../../assets/bg2.jpg')}) no-repeat;
-    background-size: cover;
-    overflow: hidden;
-    top: -80px;
+    width:100%;
+    // height: 50vh;
+    // background: url(${require('../../assets/Aboutpics/abtcar.jpg')}) no-repeat;
+    // background-size: cover;
+    // overflow: hidden;
+    top:-82px;
     margin-bottom: 0;
-    border-top: 4px solid black;
+    bottom:0;
+    // border-top: 4px solid black;
 `;
 export const INPUTCT = styled.input`
     width:100%;
@@ -31,7 +34,7 @@ export const CTForm = styled.form`
     position: relative;
     width:340px;
     height:440px;
-    background:#e6e6e6;
+    background: #202020;
     border-radius:8px;
     box-shadow:0 0 40px -10px #000;
     margin: 100px auto;
@@ -40,9 +43,11 @@ export const CTForm = styled.form`
     box-sizing:border-box;
     font-family:'Montserrat',sans-serif;
     position:relative;
-    // top: 50px;
+    top: 50px;
+
     ${INPUTCT}:focus &{
-        border-bottom:2px solid #78788c;
+        border-bottom:2px solid #fbae1a;
+        transition: 1s;
       }
 `;
 
@@ -50,8 +55,9 @@ export const HEADER2 = styled.h2`
     margin:10px 0;
     padding-bottom:10px;
     width:180px;
-    color:#78788c;
-    border-bottom:3px solid #78788c;
+    color:#fbae1a;
+    border-bottom:3px solid #fbae1a;
+    text-shadow: 1px 1px black;
 `;
 
 export const Para = styled.p`
@@ -60,7 +66,7 @@ export const Para = styled.p`
         display:block;
         margin:28px 0 0;
         font-size:14px;
-        color:#5a5a5a;
+        color:#fbae1a;
       }
 `;
 
@@ -69,15 +75,17 @@ export const CTsubmitbtn = styled.button`
     padding:8px 12px;
     margin:8px 0 0;
     font-family:'Montserrat',sans-serif;
-    border:2px solid #78788c;
+    border:1px solid #fbae1a;
     background:0;
-    color:#5a5a6e;
+    color:#fbae1a;
     cursor:pointer;
     transition:all .3s;
+    border-radius: 15px;
 
     &:hover{
-        background:#78788c;
+        background:#000;
         color:#fff;
+        border:1px solid black;
     }
 `;
 
@@ -109,4 +117,18 @@ export const CTbg = styled.div`
     background: url(${require('../../assets/bg2.jpg')}) no-repeat;
     background-size: cover;
     filter: blur(1.5px);
+`;
+
+export const FTCTbg = styled.div`
+    width: 100%;
+    height: 80vh;
+    position: absolute;
+    // background: url(${require('../../assets/bg2.jpg')}) no-repeat;
+    // background-size: cover;
+    // border: 1px solid red;
+    background: black;
+    right: 0;
+    bottom: -485px;
+    // z-index: 20;
+    z-index: -1;
 `;

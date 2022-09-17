@@ -1,10 +1,11 @@
 import React, { useState } from "react"; 
 import Sidebar from "../../Components/Sidebar/Sidebar";
 import Navbar from "../../Components/Navbarcomponents";
-import { ImgProduct } from "../productspage/productelements";
 import ContactForm from "../../Components/Contactus/ContactForm";
 import Footer from "../../Components/Footer/Footer";
-import { Abtpara, Paracontainer, AbtCarouselcontainer, AbtImgContainer, Sustain, AbtcarCtner, SustainCtner } from "./Aboutcomponents";
+import { InnerPara, InnerSustain, ImgAbt, Abtpara, Paracontainer, AbtCarouselcontainer, AbtImgContainer, Sustain, AbtcarCtner } from "./Aboutcomponents";
+import {Carousel} from 'react-responsive-carousel';
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 const About = () => {
 
 const [isOpen, setIsOpen] = useState(false);
@@ -19,9 +20,11 @@ const togglesidebar = () => {
     <>
     <Sidebar isOpen={isOpen} togglesidebar={togglesidebar}/>
        <Navbar togglesidebar={togglesidebar}/>
-       <ImgProduct src={require('../../assets/Aboutpics/aboutnavhero.jpg')} alt='heromeat'/>
+       <ImgAbt/>
         <Abtpara>
+        
             <Paracontainer>
+                <InnerPara>
                 <h1>
                     Our commitment
                 </h1>
@@ -35,45 +38,47 @@ const togglesidebar = () => {
                 </p>
                 <h2>Job Roles and Responsibilities</h2>
                 <h3>Chief Executive Officer</h3>
-                <ul>
-                    <li>Makes the decisions and overall strategies for organizational direction</li>
-                    <li>Ensures that organizational policies and decisions are duly implemented</li>
-                    <li>Negotiates with high level clients on behalf of the company</li>
-                </ul>
+                
+                    <p>Makes the decisions and overall strategies for organizational direction</p>
+                    <p>Ensures that organizational policies and decisions are duly implemented</p>
+                    <p>Negotiates with high level clients on behalf of the company</p>
+                
                 <h3>Butchery/Meat Shop Supervisor</h3>
-                <ul>
-                    <li>In charge of ensuring that the meat is cut according to customer specifications</li>
-                    <li>Ensures that the right parts are cut</li>
-                    <li>Is knowledgeable about industry trends and how it might affect the company</li>
-                </ul>
+                
+                    <p>In charge of ensuring that the meat is cut according to customer specifications</p>
+                    <p>Ensures that the right parts are cut</p>
+                    <p>Is knowledgeable about industry trends and how it might affect the company</p>
+                
                 <h3>Sales and Marketing Team</h3>
-                <ul>
-                    <li>Conducts market research in order to determine more target markets for the organization</li>
-                    <li>Drafts effective marketing strategies that will generate revenue for the organization</li>
-                    <li>Conducts one-on-one marketing on behalf of the organization</li>
-                </ul>
+                
+                    <p>Conducts market research in order to determine more target markets for the organization</p>
+                    <p>Drafts effective marketing strategies that will generate revenue for the organization</p>
+                    <p>Conducts one-on-one marketing on behalf of the organization</p>
+                
                 <h3>Driver</h3>
-                <ul>
-                    <li>In charge of driving supplies to major customers</li>
-                    <li>Ensures that the correct stock is taken to accurate destination</li>
-                    <li>Carries out light maintenance on the vehicle when necessary.</li>
-                </ul>
-            
+                
+                    <p>In charge of driving supplies to major customers</p>
+                    <p>Ensures that the correct stock is taken to accurate destination</p>
+                    <p>Carries out light maintenance on the vehicle when necessary.</p>
+                
+                </InnerPara>
             </Paracontainer>
         </Abtpara>
+        <AbtcarCtner>
         <AbtCarouselcontainer>
-            <AbtcarCtner>
+            <Carousel>
+
             <AbtImgContainer src={require('../../assets/Aboutpics/abt1.jpg')} alt='heromeat'/>
-            <AbtImgContainer src={require('../../assets/Aboutpics/abt2.jpg')} alt='heromeat'/>
+            <AbtImgContainer src={require('../../assets/Aboutpics/abt2.jpg')} alt='heromeat'/>    
             <AbtImgContainer src={require('../../assets/Aboutpics/abt3.jpg')} alt='heromeat'/>
             <AbtImgContainer src={require('../../assets/Aboutpics/abt4.jpg')} alt='heromeat'/>
             <AbtImgContainer src={require('../../assets/Aboutpics/abt5.jpg')} alt='heromeat'/>
             <AbtImgContainer src={require('../../assets/Aboutpics/abt6.jpg')} alt='heromeat'/>
-            </AbtcarCtner>
+            
+            </Carousel>
         </AbtCarouselcontainer>
-
-        <SustainCtner>
         <Sustain>
+            <InnerSustain>
             <h1>Company Sustainablity Approach</h1>
         <p>No one opens a business with the intention of having it fail in the end, which is why serious entrepreneurs lay plans that would ensure that the business remains sustained for as long as they want it and also expands as well.
 
@@ -89,9 +94,10 @@ We will also ensure that we reward loyal customers with discounts especially tho
 
 Because we took a loan in order to be able to run our business, we will put in place effective strategies that will see us plough back a percentage of our earnings into our business in order to ensure that we have a solid financial base and bottom line and grow from there. We believe that the above three factors will be suitable for our expansion and efforts at sustaining the business for as long as we want it.
 </p>
+        </InnerSustain>
         </Sustain>
+        </AbtcarCtner>
 
-        </SustainCtner>
     <ContactForm />
     <Footer />
     

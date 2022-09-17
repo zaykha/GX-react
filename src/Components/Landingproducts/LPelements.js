@@ -10,28 +10,37 @@ export const LPcontainer = styled.div`
     align-items: center;
     width:100%;
     height: auto;
-    top: -80px;
-    
-    // border: 4px solid green;
-    background: url(${require('../../assets/woodtable.jpg')});
-    background-size: cover;
-    background-position: center;
-    // background: black;
-    color: white;
+    top: -82px;
     text-shadow: 1px 2px black;
-    // gap: 0 0;
-    clip-path: ellipse(150% 100% at 57% 100%);
-    // padding: auto;
+    background: black;
+    
 
     @media screen and (max-width:1200px){
+        width:100%;
         background: url(${require('../../assets/bg8.jpg')});
         background-size: cover;
         background-position: center;
-        clip-path: ellipse(300% 100% at 50% 100%);
+        // clip-path: ellipse(300% 100% at 50% 100%);
         
     }
     
 `;
+
+export const LPInnerContainer = styled.div`
+    width:1200px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    // border-top: 1px solid #fbae1a;
+    margin: 80px auto 40px auto;
+    background: #202020;
+    padding: 20px;
+    border-radius: 20px;
+
+
+`
 
 export const Lpcontentcontainer = styled.div`
    
@@ -39,7 +48,7 @@ export const Lpcontentcontainer = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     // border: 1px solid red;
-    width: 1200px;
+    width: 1000px;
     height: 100%;
 
     @media screen and (max-width:1200px){
@@ -73,7 +82,7 @@ export const LPcontent = styled.div`
     cursor: pointer;
     background: #2a2a2a;
     border-radius: 10px;
-    filter: brightness(.8);
+    filter: brightness(.5);
     overflow: hidden;
 
     &:hover{
@@ -98,9 +107,9 @@ export const PImgpl = styled.img`
   
 `;
 
-export const PNAME = styled.h1`
+export const PNAME = styled.div`
     position: relative;
-    color: yellow;
-    
+    color: #fbae1a;
+    font-size: 2rem;
     text-shadow: 2px 2px 1px black;
 `;

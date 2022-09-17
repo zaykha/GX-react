@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link as LinkR } from "react-router-dom";
 
 export const Footercontainer=styled.div`
     position: relative;
@@ -9,8 +10,8 @@ export const Footercontainer=styled.div`
     width: 100%;
     margin-top: 0;
     color:#fbae1a;
-    text-shadow: 1px 2px black;
-    
+    // text-shadow: 1px 2px black;
+    background: #202020;
     // overflow:hidden;
 
     @media screen and (max-width: 1200px){
@@ -28,6 +29,7 @@ export const Ftopcompartment=styled.div`
     width: 1200px;
     margin: auto;
     z-index: 3;
+    
     @media screen and (max-width: 1200px){
         width: 100%;
         grid-template-columns: 1fr 1fr;
@@ -73,9 +75,9 @@ export const Fbg= styled.img`
     width: 100%;
     height: 450px;
     object-fit: cover;
-    top:-130px;
+    // top:-130px;
     z-index: 2;
-    clip-path: ellipse(117% 100% at 50% 100%);
+    // clip-path: ellipse(117% 100% at 50% 100%);
     // box-shadow: 10px 10px black;
     overflow: hidden;
 
@@ -84,3 +86,8 @@ export const Fbg= styled.img`
     }
     
 `;
+
+export const FATag= styled(LinkR)`
+    color:#fbae1a;
+    text-decoration: none;
+`

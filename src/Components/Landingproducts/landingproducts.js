@@ -1,5 +1,5 @@
 import React from 'react';
-import { LPcontainer, LPcontent, PImgpl, PNAME, Lpcontentcontainer } from './LPelements';
+import { LPInnerContainer, LPcontainer, LPcontent, PImgpl, PNAME, Lpcontentcontainer } from './LPelements';
 
 const Landingproducts = () => {
 
@@ -21,8 +21,10 @@ const Landingproducts = () => {
   
  
     
-  <LPcontainer>
-  <PNAME>Exploring made Easy!</PNAME>
+  
+    <LPcontainer>
+      <LPInnerContainer>
+      <PNAME>Exploring made Easy!</PNAME>
      <Lpcontentcontainer>
         {ProductHeaddingarr.map((product)=>(
             <LPcontent key={product.id}>
@@ -31,7 +33,10 @@ const Landingproducts = () => {
             </LPcontent>
         ))}
      </Lpcontentcontainer>
+      </LPInnerContainer>
     </LPcontainer>
+  
+   
     
  
   );

@@ -1,5 +1,5 @@
 import React from 'react';
-import { LeftAr, RightAr, PromocontentActive, PromoOuterdiv, Promocontent, PromoImg } from './Promoelement';
+import { PromoOuterdiv, Promocontent, PromoImg, Linkbtn } from './Promoelement';
 import pork from '../../assets/sets/Pork.jpg';
 import Chicken from '../../assets/sets/Chicken.jpg';
 import Fish from '../../assets/sets/Fish.jpg';
@@ -7,54 +7,13 @@ import Mutton from '../../assets/sets/Mutton.jpg';
 import Beef from '../../assets/sets/Beef.jpg';
 import Prawn from '../../assets/sets/Prawn.jpg';
 import { CloseIcon, Icon } from '../../Components/Sidebar/Sidebarelement';
-import { useState } from 'react';
+import { Carousel } from 'react-responsive-carousel';
+
 
 
 
 const Promo = ({Promoprompt, togglePromoprompt}) => {
 
-    const PromoObj = [
-        {
-            name: 'Beef',
-            src: Beef
-        },
-        {
-            name: 'Chicken',
-            src: Chicken
-        },
-        {
-            name: 'Fish',
-            src: Fish
-        },
-        {
-            name: 'Mutton',
-            src: Mutton
-        },
-        {
-            name: 'Pork',
-            src: pork
-        },
-        {
-            name: 'Prawn',
-            src: Prawn
-         },
-    
-    ];
- 
-const [ Carolcount, setCarolcount ] = useState(0);
-
-const Carolstateadd = ()=>{
-    
-    setCarolcount(Carolcount === PromoObj.length -1 ? 0: Carolcount +1);
-       
-    console.log(Carolcount);     
-};
-const Carolstateminus = ()=>{
-    
-    setCarolcount( Carolcount === 0 ? PromoObj.length-1 :Carolcount -1 );
-    
-    console.log(Carolcount);        
-};
 
 
   return (
@@ -65,29 +24,34 @@ const Carolstateminus = ()=>{
         <CloseIcon onClick={togglePromoprompt}/>
     </Icon>
     
-            {/* <Promodiv  > */}
-            <LeftAr onClick={Carolstateminus} />
-            {PromoObj.map((Promoobj, index)=>{
-                return(
-                    <div>
-                        {index === Carolcount? 
-
-                        <PromocontentActive key={index} onClick={togglePromoprompt} to='/productspage'>
-                            {index === Carolcount &&(<PromoImg src={Promoobj.src}  alt={Promoobj.name} />)}
-                        </PromocontentActive> :
-                        
-                        <Promocontent key={index} onClick={togglePromoprompt} to='/productspage'>
-                             {index === Carolcount &&(<PromoImg src={Promoobj.src}  alt={Promoobj.name} />)}
-                        </Promocontent>
-                        }
-                    
-                    </div>
-                )
-            })}
+    <Promocontent>
+        <Carousel autoPlay="true">
             
-            <RightAr onClick={Carolstateadd} />
-            {/* </Promodiv> */}
-    
+                <PromoImg src={Beef}  alt="promo" />
+           
+            
+                <PromoImg src={Fish}  alt="promo" />
+           
+            
+                <PromoImg src={Mutton}  alt="promo" />
+           
+            
+                <PromoImg src={pork}  alt="promo" />
+           
+            
+                <PromoImg src={Prawn}  alt="promo" />
+           
+            
+                <PromoImg src={Chicken}  alt="promo" />
+           
+            {/* <PromoImg to='/productspage' src={Chicken}  alt="promo" />
+            <PromoImg to='/productspage' src={Fish}  alt="promo" />
+            <PromoImg to='/productspage' src={Mutton}  alt="promo" />
+            <PromoImg to='/productspage' src={pork}  alt="promo" />
+            <PromoImg to='/productspage' src={Prawn}  alt="promo" />               */}
+        </Carousel>
+    </Promocontent>
+    <Linkbtn to='/productspage'>Shop now</Linkbtn>       
         
     </PromoOuterdiv>
   )

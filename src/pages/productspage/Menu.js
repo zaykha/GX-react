@@ -1,6 +1,6 @@
 import React,{useState} from 'react';
 import { PSectioncenter, PH4item, PArticlemenuitem, PIMGphoto, Pdiviteminfo, Pheader,
-   PH4price, Plusbutton, Minusbutton, Addtocartbtn, Flexdiv, FAcartcss, Flexbox, TTLdisplay
+   PH4price, Plusbutton, Minusbutton, Addtocartbtn, Flexdiv, FAcartcss, Flexbox
 } from './productelements';
 import './p.css';
 import {  FaBan, FaCheck } from 'react-icons/fa';
@@ -9,8 +9,6 @@ import {  FaBan, FaCheck } from 'react-icons/fa';
 
 const Menu = (props) => {
   const {items, basket, onAdd, onRemove, ondelete} = props;
-  
-  const [itemIndex, setitemIndex] = useState(0);
   
   const [hover, sethover] =useState(true);
   const togglehover = ()=>{

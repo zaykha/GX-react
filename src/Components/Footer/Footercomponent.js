@@ -11,13 +11,13 @@ export const Footercontainer=styled.div`
     margin-top: 0;
     color:#fbae1a;
     // text-shadow: 1px 2px black;
-    background: #202020;
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6) );
     // overflow:hidden;
 
     @media screen and (max-width: 1200px){
-        background: url(${require('../../assets/Aboutpics/194.jpg')}) no-repeat;
-    background-size: cover;
-    background-position:center;
+    //     background: url(${require('../../assets/Aboutpics/194.jpg')}) no-repeat;
+    // background-size: cover;
+    // background-position:center;
     }
 `;
 export const Ftopcompartment=styled.div`
@@ -44,8 +44,8 @@ export const Fcontent=styled.div`
     display: flex;
     flex-direction: column;
     // margin-left: 80px;
-    // align-content: center;
-    // justify-content: center;
+    align-content: center;
+    justify-content: flex-start;
     text-align: center;
     width: 300px  ;
     // border: 1px solid blue;
@@ -56,7 +56,10 @@ export const Fcontent=styled.div`
     }
 `;
 export const Frow=styled.div`
+    width: 80%;
+    // border: 1px solid green;
     display: flex;
+    justify-content: space-evenly;
     margin: auto;
 `;
 export const FCopyright=styled.div`
@@ -70,24 +73,11 @@ export const FCopyright=styled.div`
 
 `;
 
-export const Fbg= styled.img`
-    position: absolute;
-    width: 100%;
-    height: 450px;
-    object-fit: cover;
-    // top:-130px;
-    z-index: 2;
-    // clip-path: ellipse(117% 100% at 50% 100%);
-    // box-shadow: 10px 10px black;
-    overflow: hidden;
-
-    @media screen and (max-width: 1200px){
-        display: none;
-    }
-    
-`;
-
 export const FATag= styled(LinkR)`
     color:#fbae1a;
     text-decoration: none;
+
+    :hover{
+        color: white;
+    }
 `

@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import Menu from './Menu';
 import Categories from './Catagories';
 import items from './data';
-import { Pdiv, Checkoutdiv, ImgProduct, PSection, PTitle, PUnderline, TTLdisplay } from './productelements';
+import { BGimg, Pdiv, Checkoutdiv, ImgProduct, PSection, PTitle, PUnderline, TTLdisplay } from './productelements';
 import Navbar from '../../Components/Navbarcomponents';
 import Sidebar from '../../Components/Sidebar/Sidebar';
 import Categoriesmobile from './Catagoriesmobile';
@@ -11,7 +11,7 @@ import { FaArrowRight, FaCartArrowDown } from 'react-icons/fa';
 
 
 
-const allCategories = ['all', ...new Set(items.map((item) => item.category))]
+const allCategories = ['All', ...new Set(items.map((item) => item.category))]
 
 const Productspage = (props) => {
   const {basket, onAdd, onRemove, ondelete}= props;
@@ -22,7 +22,7 @@ const Productspage = (props) => {
   const [categories, setCategories] = useState(allCategories);
 
   const filterItems = (category) => {
-    if (category === 'all') {
+    if (category === 'All') {
       setMenuItems(items)
       return
     }
@@ -45,7 +45,7 @@ const Productspage = (props) => {
        <Navbar togglesidebar={togglesidebar}/>
        <Pdiv>
        <ImgProduct src={require('../../assets/bg3.jpg')} alt='heromeat'/>
-       
+       <BGimg></BGimg>
       <PSection>
         <PTitle>
           Our Products
@@ -54,6 +54,7 @@ const Productspage = (props) => {
        
         <Categories categories={categories} filterItems={filterItems} />
         <Categoriesmobile categories={categories} filterItems={filterItems}/>
+        
         <TTLdisplay>Total: {itemsPrice + 1500} kyats
         <Checkoutdiv to='/cart'>Check Out <FaCartArrowDown/><FaArrowRight/></Checkoutdiv>
         </TTLdisplay>

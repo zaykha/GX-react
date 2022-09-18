@@ -34,7 +34,7 @@ export const CTForm = styled.form`
     position: relative;
     width:340px;
     height:440px;
-    background: #202020;
+    background: rgba(32,32,32,0.6);
     border-radius:8px;
     box-shadow:0 0 40px -10px #000;
     margin: 100px auto;
@@ -53,7 +53,7 @@ export const CTForm = styled.form`
 
 export const HEADER2 = styled.h2`
     margin:10px 0;
-    padding-bottom:10px;
+    padding-bottom:10px;w
     width:180px;
     color:#fbae1a;
     border-bottom:3px solid #fbae1a;
@@ -93,7 +93,7 @@ export const CTinfordiv = styled.div`
     content:'Hi';
     position:absolute;
     bottom:-15px;right:-20px;
-    background:#50505a;
+    background: rgba(35,35,35,0.9);
     color:#fff;
     width:320px;
     padding:16px 4px 16px 0;
@@ -119,16 +119,16 @@ export const CTbg = styled.div`
     filter: blur(1.5px);
 `;
 
-export const FTCTbg = styled.div`
-    width: 100%;
-    height: 80vh;
-    position: absolute;
-    // background: url(${require('../../assets/bg2.jpg')}) no-repeat;
-    // background-size: cover;
-    // border: 1px solid red;
-    background: black;
-    right: 0;
-    bottom: -485px;
-    // z-index: 20;
-    z-index: -1;
-`;
+// export const FTCTbg = styled.div`
+//     width: 100%;
+//     height: 100vh;
+//     position: absolute;
+//     // background: url(${require('../../assets/bg2.jpg')}) no-repeat;
+//     // background-size: cover;
+//     // border: 1px solid red;
+//     background: black;
+//     right: 0;
+//     bottom: -485px;
+//     // z-index: 20;
+//     z-index: -1;
+// `;

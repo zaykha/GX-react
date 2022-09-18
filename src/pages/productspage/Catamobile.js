@@ -15,7 +15,8 @@ display: none;
 
 export const Selectcata = styled.select`
     background-color: transparent;
-    border: none;
+    border: 1px solid #fbae1a;
+    border-radius: 3px;
     padding: 0 1em 0 0;
     margin: 0;
     width: 100%;
@@ -23,6 +24,7 @@ export const Selectcata = styled.select`
     font-size: inherit;
     cursor: inherit;
     line-height: inherit;
+    color: #fbae1a;
     
 `;
 

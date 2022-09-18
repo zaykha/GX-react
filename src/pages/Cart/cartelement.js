@@ -13,9 +13,13 @@ export const CartCard = styled.div`
   margin: 20px auto 200px auto;
 //   border: 1px solid black;
   box-shadow: 1px 1px black;
-  background: rgba(225,225,225,0.95);
+  background: rgba(225,225,225,0.8);
   border-radius: 20px;
 
+  @media screen and (max-width: 1200px){
+    width: 100%;
+    font-size: .8rem;
+  }
   `;
 export const CartMaincontainer = styled.div`
     width: 80%;
@@ -27,8 +31,8 @@ export const CartMaincontainer = styled.div`
     align-items: center;
     flex-direction: column;
 
-    @media screen and (max-width:1200px;){
-        width: 100%;
+    @media screen and (max-width:1200px){
+        width: 100%;    
     }
 `;
 export const Cartflexdiv = styled.div`
@@ -38,6 +42,15 @@ export const Cartflexdiv = styled.div`
     justify-content: space-around;
     margin: 10px auto;
     // border: 1px solid green;
+
+    @media screen and (max-width:1500px){
+        flex-direction: column;
+        align-items: center;
+        flex-wrap:wrap;
+        background: rgba(0,0,0,0.2);
+        border-radius: 10px;
+        padding: 10px;  
+    }
 `;
 export const CartSummarydiv = styled.div`
     width: 60%;
@@ -90,9 +103,9 @@ export const CartButton = styled.button`
         cursor: pointer;
       
     }
-    @media screen and (max-width:1200px;){
+    @media screen and (max-width:1200px){
         width: 60%;
-        margin: 0;
+        margin: 10px auto;
     }
 `;
 

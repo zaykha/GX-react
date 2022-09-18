@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaFacebook, FaInstagram, FaTwitter, FaViber, FaTelegram } from 'react-icons/fa';
-import { FATag, Ftopcompartment, Footercontainer, Fcontent, FCopyright, Frow, Fbg } from './Footercomponent';
+import { FATag, Ftopcompartment, Footercontainer, Fcontent, FCopyright, Frow } from './Footercomponent';
 
 const Footer = () => {
   return (
@@ -14,15 +14,18 @@ const Footer = () => {
                 <FATag to='/'>Licenses</FATag>
             </Fcontent>
             <Fcontent>
+                
                 <h1>CONTACT</h1>
                 <p>contact@gourmetexpress.com</p>
                 <p>+95973515248, +951228496</p>
+                
                 <Frow>
-                    <FaFacebook/>
-                    <FaInstagram/>
-                    <FaTwitter/>
-                    <FaViber/>
-                    <FaTelegram/>
+                <FATag to="/"><FaFacebook/></FATag>
+                <FATag to="/"><FaInstagram/></FATag>
+                <FATag to="/"><FaTwitter/></FATag>
+                <FATag to="/"><FaViber/></FATag>
+                <FATag to="/"><FaTelegram/></FATag>
+        
                 </Frow>
             </Fcontent>
             <Fcontent>

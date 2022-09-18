@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import { Link as LinkR } from "react-router-dom";
 
 export const LPcontainer = styled.div`
     
@@ -12,15 +12,11 @@ export const LPcontainer = styled.div`
     height: auto;
     top: -82px;
     text-shadow: 1px 2px black;
-    background: black;
+    background: 0;
     
 
     @media screen and (max-width:1200px){
-        width:100%;
-        background: url(${require('../../assets/bg8.jpg')});
-        background-size: cover;
-        background-position: center;
-        // clip-path: ellipse(300% 100% at 50% 100%);
+        width:100%;   
         
     }
     
@@ -35,10 +31,18 @@ export const LPInnerContainer = styled.div`
     align-items: center;
     // border-top: 1px solid #fbae1a;
     margin: 80px auto 40px auto;
-    background: #202020;
-    padding: 20px;
+    background: rgba(32,32,32,0.5);
+    box-shadow:  0 0 8px #000;;
+    padding: 20px 0;
     border-radius: 20px;
 
+    @media screen and (max-width:1200px){
+        width:100%;
+        margin: 0;
+        padding: 0;
+        // clip-path: ellipse(300% 100% at 50% 100%);
+        
+    }
 
 `
 
@@ -56,12 +60,13 @@ export const Lpcontentcontainer = styled.div`
         grid-template-columns: 1fr 1fr ;
        
         width: 100%;
-       
+       margin:0;
     }
     @media screen and (max-width:768px){
       
         grid-template-columns: 1fr  ;
         width: 100%;
+        margin: 0;
      
     }
 
@@ -69,7 +74,7 @@ export const Lpcontentcontainer = styled.div`
 
 
 
-export const LPcontent = styled.div`
+export const LPcontent = styled(LinkR)`
     position: relative;
     display: flex;
     flex-direction: column;
@@ -84,6 +89,7 @@ export const LPcontent = styled.div`
     border-radius: 10px;
     filter: brightness(.5);
     overflow: hidden;
+    text-decoration: none;
 
     &:hover{
         

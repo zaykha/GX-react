@@ -67,7 +67,7 @@ const togglesidebar = () => {
         </Abtpara>
         <AbtcarCtner>
         <AbtCarouselcontainer>
-            <Carousel>
+            <Carousel showThumbs={false}>
 
             <AbtImgContainer src={require('../../assets/Aboutpics/abt1.jpg')} alt='heromeat'/>
             <AbtImgContainer src={require('../../assets/Aboutpics/abt2.jpg')} alt='heromeat'/>    

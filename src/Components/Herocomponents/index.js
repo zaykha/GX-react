@@ -20,6 +20,7 @@ import {
 } from './herocomponents';
 
 
+
 const HeroSection = () => {
 
    
@@ -28,6 +29,8 @@ const HeroSection = () => {
     const togglePromoprompt = ()=>{
       setPromoprompt(!Promoprompt)
     }
+    
+    
     
 
   return (
@@ -67,7 +70,9 @@ const HeroSection = () => {
       </AboutInnerContainer>
     </AboutContainer>
 
-
+        
+        
+      
 
        
        </>

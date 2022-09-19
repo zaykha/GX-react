@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Link as LinkR } from "react-router-dom";
+
 
 
 export const OuterlayerSubmit = styled.div`
@@ -18,7 +18,7 @@ export const OuterlayerSubmit = styled.div`
 
 export const SubmitPrompt = styled.div`
     width: 58%;
-    height: auto;
+    height: 100%;
     background: rgba(0,0,0,0.6);
     margin: auto;
     pading: 20px;
@@ -26,6 +26,13 @@ export const SubmitPrompt = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    
+
+    @media screen and (max-width: 960px){
+        width: 100%;
+        padding: 5px;
+        text-align: center;
+    }
 `;
 
 export const PSUL = styled.div`
@@ -36,6 +43,7 @@ export const PSUL = styled.div`
     justify-content: center;
     border-bottom: 1px solid grey;
     margin: 0.1rem auto 0.1rem auto;
+    
 `;
 
 export const PSLI = styled.div`
@@ -76,7 +84,7 @@ export const CancelBtn = styled.div`
     }
 `;
 
-export const ConfirmBtn = styled(LinkR)`
+export const ConfirmBtn = styled.div`
     padding: 8px 12px;
     margin: 20px;
     font-size: 1rem;
@@ -102,4 +110,24 @@ export const ConfirmBtn = styled(LinkR)`
 
 export const Flexdiv = styled.div`
     display: flex;
+`
+export const Overflowdiv = styled.div`
+    width: 80%;
+    height: 60%;
+    overflow-y: scroll;
+
+    ::-webkit-scrollbar{
+        width: 5px;
+    }
+    ::-webkit-scrollbar-track {
+        background: 0;
+    }
+    ::-webkit-scrollbar-thumb {
+        border-radius: 4px;
+        background: #fbae1a;
+    }  
+    ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
+    // border: 1px solid green;
 `

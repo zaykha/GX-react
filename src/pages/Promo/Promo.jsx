@@ -25,7 +25,7 @@ const Promo = ({Promoprompt, togglePromoprompt}) => {
     </Icon>
     
     <Promocontent>
-        <Carousel autoPlay="true">
+        <Carousel showThumbs={false} autoPlay="true">
             
                 <PromoImg src={Beef}  alt="promo" />
            

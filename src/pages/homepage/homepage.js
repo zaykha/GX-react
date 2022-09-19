@@ -8,6 +8,7 @@ import { useState } from 'react';
 import Footer from '../../Components/Footer/Footer';
 
 
+
 const Homepage = () => {
   
    const [isOpen, setIsOpen] = useState(false);
@@ -17,7 +18,7 @@ const Homepage = () => {
   
    }  
   return (
-      <div>
+      <>
     <Sidebar isOpen={isOpen} togglesidebar={togglesidebar}/>
     <Navbar togglesidebar={togglesidebar}/>
     
@@ -26,7 +27,7 @@ const Homepage = () => {
      <ContactForm />
      <Footer/>
      
-     </div>
+     </>
     );
 };
 

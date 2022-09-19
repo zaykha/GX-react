@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Cartinput, AdjustBtn, CartCard, CartButton, CartForm, CartPage, Cartflexdiv, CartMaincontainer, CartSummarydiv, CartTotaldiv } from './cartelement';
 import { FormHelperText, ListItemText, TextField, Typography } from '@mui/material';
 import Sidebar from '../../Components/Sidebar/Sidebar';
@@ -8,7 +8,8 @@ import emailjs from '@emailjs/browser';
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from 'yup';
-import { CancelBtn, Flexdiv, PSUL, PSLI, PSp, OuterlayerSubmit, SubmitPrompt, ConfirmBtn } from './PurchaseSummary';
+import { Overflowdiv, CancelBtn, Flexdiv, PSUL, PSLI, PSp, OuterlayerSubmit, SubmitPrompt, ConfirmBtn } from './PurchaseSummary';
+import { NotiSpan, Btndiv, NotiBtn, Noticard, Notidiv, Notip } from '../../Components/Herocomponents/notielement';
 
 const Cart = (props) => {
 
@@ -23,10 +24,22 @@ const Cart = (props) => {
     
     });
 
-    const { register,handleSubmit, formState:{errors} } = useForm({
+    const { register, handleSubmit, watch, formState:{errors} } = useForm({
         resolver: yupResolver(FormSchema),
     })
     
+    const Watchname = watch("name", false);
+    const Watchemail = watch("email", false);
+    const Watchcontact = watch("contact", false);
+    const Watchaddress = watch("address", false);
+    const Watchmessage = watch("message", false);
+
+    useEffect(()=>{
+        const Subscription = watch((value,{name, type})=>console.log(value, name, type));
+        return ()=> Subscription.unsubscribe();
+    },[watch])
+
+
     const {basket, onAdd, onRemove} = props;
     const itemsPrice = basket.reduce((a, c) => a + c.qty * c.price, 0);
     const shippingPrice = itemsPrice < 10000 ? 0 : 1500;
@@ -34,7 +47,7 @@ const Cart = (props) => {
 
     const FForm = useRef();
 
-    const [Submitted, setSubmitted] = useState(false);
+    const [Submitted, setSubmitted] = useState({purchaseprompt:false, confirmed:false});
     const [Values, setValues ] = useState({
         basket,
         totalPrice,
@@ -49,10 +62,7 @@ const Cart = (props) => {
         setValues({ ...Values, [prop]: event.target.value });
       };
 
-    const Checkout = ()=>{
-        setSubmitted(true);
-        console.log(basket[0].title);
-    };
+   
 
     const sendEmail = (e) => {
         e.preventDefault();
@@ -65,6 +75,8 @@ const Cart = (props) => {
           });
 
       };
+    // const onSubmit =(data,e) =>console.log(data, e);
+    // const onError = (error,e) =>console.log(errors,e);
 
       const [isOpen, setIsOpen] = useState(false);
   
@@ -74,10 +86,12 @@ const Cart = (props) => {
       } 
     
       const PurchaseSuccess = ()=>{
-        setSubmitted(false);
-        basket.length=0;
-      }
-
+        setSubmitted({purchaseprompt:false, confirmed:true})
+        basket.length=0
+        console.log(Values)
+    }
+      
+      
   return (
     <CartPage>
         
@@ -146,6 +160,7 @@ const Cart = (props) => {
             id="outlined-basic" 
             label="Email" 
             name='email'
+            onInput={e=>setValues({...Values, email:e.target.value})}
             onChange={handleChange('email')}
             variant="outlined" 
             margin="normal"
@@ -156,6 +171,7 @@ const Cart = (props) => {
         <TextField
             id="outlined-basic" 
             label="Contact" 
+            onInput={e=>setValues({...Values, contact:e.target.value})}
             onChange={handleChange('contact')}
             name='contact'
             variant="outlined" 
@@ -189,7 +205,15 @@ const Cart = (props) => {
             {...register('message')}
         />
        
-            <CartButton type='submit' onClick={Checkout}>Submit</CartButton>
+            <CartButton type='submit' 
+            onClick={()=>{
+                basket.length===0 ? alert('Empty basket'):
+
+                        Watchname|| Watchemail|| Watchcontact|| Watchaddress|| Watchmessage ?setSubmitted({purchaseprompt:true}):
+                        console.log('fail form')}}
+                        >
+                            Submit
+            </CartButton>
            
         </CartForm>
 
@@ -198,11 +222,13 @@ const Cart = (props) => {
     
     </CartCard>
     <Footer/>
-    {Submitted ?
+    
+    {Submitted.purchaseprompt && !Submitted.confirmed ?
             <OuterlayerSubmit>
                 <SubmitPrompt>
                     {/* <SubmitMessage> */}
                        <Typography variant='h3' mt={3}>Purchase Summary</Typography> 
+                       <Overflowdiv>
                         {basket.map((item,index)=>(
                             <PSUL key={index}>
                                 
@@ -213,16 +239,36 @@ const Cart = (props) => {
                                 <PSLI>For the Quantity of ({item.qty}) Totaling $ {item.qty*item.price}</PSLI>
                             </PSUL>
                         ))}
+                        </Overflowdiv>
                         <Typography variant='h5'>Delivery fees: ${shippingPrice}</Typography>
                         <Typography variant='h5'>Grand Total: ${totalPrice}</Typography>
                         <Flexdiv>
-                        <ConfirmBtn to='/' onClick={PurchaseSuccess}>Confirm Purchase</ConfirmBtn>
-                        <CancelBtn onClick={()=>{setSubmitted(false)}}>Cancel</CancelBtn>
+                        <ConfirmBtn  onClick={PurchaseSuccess}>Confirm Purchase</ConfirmBtn>
+                        <CancelBtn onClick={()=>{setSubmitted({purchaseprompt:false})}}>Cancel</CancelBtn>
                         </Flexdiv>
                     {/* </SubmitMessage> */}
                  </SubmitPrompt>
             </OuterlayerSubmit>:<></>
 
+        }
+
+    
+    {!Submitted.purchaseprompt && Submitted.confirmed ?<Notidiv>
+          <Noticard>
+            <Notip>
+              Thank you for purchasing our products.
+            </Notip>
+            <Notip>
+              We have send you the purchase detail to your email 
+              <NotiSpan> {Values.email} </NotiSpan> and will contact you via your contact 
+              <NotiSpan> {Values.contact} </NotiSpan> 
+              number shortly.
+            </Notip>
+            <Btndiv>
+            <NotiBtn to='/'>Close</NotiBtn>
+            </Btndiv>
+          </Noticard>
+        </Notidiv>:<></>
         }
     </CartPage>
   )

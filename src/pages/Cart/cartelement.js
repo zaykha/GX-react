@@ -1,11 +1,25 @@
 import styled from "styled-components";
 
 export const CartPage = styled.div`
-  width: 100%;
-  height: auto;
-  background: url(${require('../../assets/CheckoutBGG.jpg')}) no-repeat;
+    width: 100%;
+    height: 100%;
+    background: url(${require('../../assets/CheckoutBGG.jpg')}) no-repeat;
     background-size: cover;
     background-position:center;
+    overflow-y: scroll;
+    ::-webkit-scrollbar{
+        width: 5px;
+    }
+    ::-webkit-scrollbar-track {
+        background: 0;
+    }
+    ::-webkit-scrollbar-thumb {
+        border-radius: 4px;
+        background: #fbae1a;
+    }  
+    ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
 
   `;
 export const CartCard = styled.div`

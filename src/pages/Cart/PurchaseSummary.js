@@ -84,7 +84,7 @@ export const CancelBtn = styled.div`
     }
 `;
 
-export const ConfirmBtn = styled.div`
+export const ConfirmBtn = styled.button`
     padding: 8px 12px;
     margin: 20px;
     font-size: 1rem;

@@ -20,11 +20,11 @@ const Cart = (props) => {
         email: yup.string().email().required(),
         contact: yup.string().matches(phoneRegExp, 'Phone number is not valid').required(),
         address: yup.string().required(),
-        message: yup.string().required(),
+        
     
     });
 
-    const { register, handleSubmit, watch, formState:{errors} } = useForm({
+    const { register, reset, handleSubmit, watch, formState:{errors} } = useForm({
         resolver: yupResolver(FormSchema),
     })
     
@@ -32,7 +32,7 @@ const Cart = (props) => {
     const Watchemail = watch("email", false);
     const Watchcontact = watch("contact", false);
     const Watchaddress = watch("address", false);
-    const Watchmessage = watch("message", false);
+    
 
     useEffect(()=>{
         const Subscription = watch((value,{name, type})=>console.log(value, name, type));
@@ -64,8 +64,9 @@ const Cart = (props) => {
 
    
 
+    // const Testsubmit=
     const sendEmail = (e) => {
-        e.preventDefault();
+        // e.preventDefault();
     
         emailjs.sendForm('service_438j29p', 'contact_form', FForm.current, 'e_Kj3aGMgJDPVWzSz')
           .then((result) => {
@@ -87,6 +88,8 @@ const Cart = (props) => {
     
       const PurchaseSuccess = ()=>{
         setSubmitted({purchaseprompt:false, confirmed:true})
+        reset({name:'', email:'', contact:'', address:'', message:''})
+        sendEmail()
         basket.length=0
         console.log(Values)
     }
@@ -100,13 +103,13 @@ const Cart = (props) => {
     <CartCard>
     <CartForm 
     ref={FForm} 
-    onSubmit={handleSubmit()}
+    onSubmit={handleSubmit(PurchaseSuccess)}
     >
         <CartMaincontainer>
             <h1>Cart Summary</h1>
-        <div>
+        
             {basket.length === 0 && <div> Cart empty</div>}
-        </div>
+        
         {basket.map((item)=>(
             <Cartflexdiv key={item.id}>
                 <Cartinput type='text' name='itemTitle' readOnly value={item.title}/>
@@ -202,28 +205,20 @@ const Cart = (props) => {
             onChange={handleChange('message')}
             name='message'
             rows={4} 
-            {...register('message')}
+            
         />
        
-            <CartButton type='submit' 
-            onClick={()=>{
-                basket.length===0 ? alert('Empty basket'):
+            <CartButton onClick={()=>{
+            basket.length===0 ? alert('Empty basket'):
 
-                        Watchname|| Watchemail|| Watchcontact|| Watchaddress|| Watchmessage ?setSubmitted({purchaseprompt:true}):
-                        console.log('fail form')}}
-                        >
-                            Submit
+            Watchname|| Watchemail|| Watchcontact|| Watchaddress ?setSubmitted({...Values,purchaseprompt:true}):
+            alert("please fill in the form")
+           
+             }}>
+                Next
             </CartButton>
            
-        </CartForm>
-
-        
-
-    
-    </CartCard>
-    <Footer/>
-    
-    {Submitted.purchaseprompt && !Submitted.confirmed ?
+            {Submitted.purchaseprompt && !Submitted.confirmed ?
             <OuterlayerSubmit>
                 <SubmitPrompt>
                     {/* <SubmitMessage> */}
@@ -243,14 +238,25 @@ const Cart = (props) => {
                         <Typography variant='h5'>Delivery fees: ${shippingPrice}</Typography>
                         <Typography variant='h5'>Grand Total: ${totalPrice}</Typography>
                         <Flexdiv>
-                        <ConfirmBtn  onClick={PurchaseSuccess}>Confirm Purchase</ConfirmBtn>
-                        <CancelBtn onClick={()=>{setSubmitted({purchaseprompt:false})}}>Cancel</CancelBtn>
+                        <ConfirmBtn type='submit'>Confirm Purchase</ConfirmBtn>
+                        <CancelBtn onClick={()=>{
+                            setSubmitted({...Submitted, purchaseprompt:false})}}>Cancel</CancelBtn>
                         </Flexdiv>
                     {/* </SubmitMessage> */}
                  </SubmitPrompt>
             </OuterlayerSubmit>:<></>
 
         }
+
+        </CartForm>
+
+        
+
+    
+    </CartCard>
+    <Footer/>
+    
+    
 
     
     {!Submitted.purchaseprompt && Submitted.confirmed ?<Notidiv>

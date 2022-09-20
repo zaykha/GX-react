@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { Link as LinkR } from "react-router-dom";
 
+
 export const Pdiv= styled.div`
     width: 100%;
     background: linear-gradient( rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5) );
@@ -114,23 +115,20 @@ export const PArticlemenuitem = styled.article`
     }
 `;
 
-export const PIMGphoto = styled.img`
+
+export const PIMGphotoZ = styled.img`
     object-fit: cover;
     height: 150px;
     width: 240px;
     border: 1px solid black;
-    box-shadow:2px 2px black;
+    box-shadow: 2px 2px black;
     border-radius: 0.25rem;
     display: block;
-
-    // @media screen and (min-width:768px){
-    //     height: 175px;
-    // }
-
-    // @media screen and (min-width: 1200px){
-    //     height: 150px;
-    // }
+    // cursor: pointer;
+    
 `;
+
+
 
 export const Pdiviteminfo = styled.div`
     display: flex;
@@ -237,6 +235,40 @@ export const PAnc = styled.a`
                 transform: translateY(0) scale(1,1);
     }
 `;
+
+export const Setdiv = styled.div`
+    position: relative;
+    margin: auto;
+    top:-1rem;
+
+    &:hover{
+        cursor:pointer;
+        color:white;  
+    }
+`
+export const ELcontainer = styled.div`
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.5);
+    color: #fbae1a;
+    z-index: 200;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+`;
+
+export const ELimg = styled.img`
+    width: 80%;
+    hieght: 50%;
+
+    &:hover{
+        cursor: pointer;
+    }
+`
+
 export const PSpan = styled.span`
     margin: 0 auto;
     transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);

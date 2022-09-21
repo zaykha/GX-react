@@ -306,7 +306,7 @@ const menu = [
         price: 1700,
         
         img: require("../../assets/Lamb/LambBrain.jpg"),
-        perunit: '/piece'
+        perunit: 'Ks/piece'
       },
       {
         id: 35,
@@ -327,7 +327,7 @@ const menu = [
         price: 500,
         
         img: require("../../assets/vegs/bitterguard.jpg"),
-        perunit: '/piece'
+        perunit: 'Ks/piece'
       },
       {
         id: 37,
@@ -336,7 +336,7 @@ const menu = [
         price: 400,
         
         img: require("../../assets/vegs/BoneLoneThee.jpg"),
-        perunit: '/piece'
+        perunit: 'Ks/piece'
       },
       {
         id: 38,
@@ -345,7 +345,7 @@ const menu = [
         price: 1500,
         
         img: require("../../assets/vegs/BooThee.jpg"),
-        perunit: '/piece'
+        perunit: 'Ks/piece'
       },
       {
         id: 39,
@@ -354,7 +354,7 @@ const menu = [
         price: 500,
         
         img: require("../../assets/vegs/ChineseCabbage.jpg"),
-        perunit: '/bud'
+        perunit: 'Ks/bud'
       },
       {
         id: 40,
@@ -363,7 +363,7 @@ const menu = [
         price: 300,
         
         img: require("../../assets/vegs/Cucumber.jpg"),
-        perunit: '/piece'
+        perunit: 'Ks/piece'
       },
       {
         id: 41,
@@ -372,7 +372,7 @@ const menu = [
         price: 300,
         
         img: require("../../assets/vegs/EggPlant.jpg"),
-        perunit: '/piece'
+        perunit: 'Ks/piece'
       },
       {
         id: 42,
@@ -381,7 +381,7 @@ const menu = [
         price: 2000,
         
         img: require("../../assets/vegs/SavoyCabbage.jpg"),
-        perunit: '/bud'
+        perunit: 'Ks/bud'
       },
       {
         id: 43,
@@ -390,7 +390,7 @@ const menu = [
         price: 1200,
         
         img: require("../../assets/vegs/Broccoli.jpg"),
-        perunit: '/bud'
+        perunit: 'Ks/bud'
       },
       {
         id: 44,
@@ -399,7 +399,7 @@ const menu = [
         price: 300,
         
         img: require("../../assets/vegs/GreenChilli.jpg"),
-        perunit: '/100g'
+        perunit: 'Ks/100g'
       },
       {
         id: 45,
@@ -408,7 +408,7 @@ const menu = [
         price: 300,
         
         img: require("../../assets/vegs/HinNuNwal.jpg"),
-        perunit: '/bundle'
+        perunit: 'Ks/bundle'
       },
       {
         id: 46,
@@ -417,7 +417,7 @@ const menu = [
         price: 300,
         
         img: require("../../assets/vegs/GazoonYuat.jpg"),
-        perunit: '/bundle'
+        perunit: 'Ks/bundle'
       },
       {
         id: 47,
@@ -426,7 +426,7 @@ const menu = [
         price: 500,
         
         img: require("../../assets/vegs/Lemon.jpg"),
-        perunit: '/piece'
+        perunit: 'Ks/piece'
       },
       {
         id: 48,
@@ -435,7 +435,7 @@ const menu = [
         price: 100 ,
         
         img: require("../../assets/vegs/Lime.jpg"),
-        perunit: '/piece'
+        perunit: 'Ks/piece'
       },
       {
         id: 49,
@@ -444,7 +444,7 @@ const menu = [
         price: 300,
         
         img: require("../../assets/vegs/Carrot.jpg"),
-        perunit: '/100g'
+        perunit: 'Ks/100g'
       },
       {
         id: 50,
@@ -453,7 +453,7 @@ const menu = [
         price: 500,
         
         img: require("../../assets/vegs/WhiteCarrot.jpg"),
-        perunit: '/bundle'
+        perunit: 'Ks/bundle'
       },
       {
         id: 51,
@@ -462,7 +462,7 @@ const menu = [
         price: 200,
         
         img: require("../../assets/vegs/Coriander.jpg"),
-        perunit: '/bundle'
+        perunit: 'ks/bundle'
       },
       {
         id: 52,
@@ -471,7 +471,7 @@ const menu = [
         price: 250,
         
         img: require("../../assets/vegs/BeanSprout.jpg"),
-        perunit: '/100g'
+        perunit: 'ks/100g'
       },
       {
         id: 53,
@@ -480,7 +480,7 @@ const menu = [
         price: 300,
         
         img: require("../../assets/vegs/MintLeaves.jpg"),
-        perunit: '/bundle'
+        perunit: 'Ks/bundle'
       },
       {
         id: 54,
@@ -489,7 +489,7 @@ const menu = [
         price: 1500,
         
         img: require("../../assets/vegs/CauliFlower.jpg"),
-        perunit: '/piece'
+        perunit: 'Ks/piece'
       },
       {
         id: 55,
@@ -498,7 +498,7 @@ const menu = [
         price: 300,
         
         img: require("../../assets/vegs/Pumpkin.jpg"),
-        perunit: '/100g'
+        perunit: 'Ks/100g'
       },
       {
         id: 56,
@@ -507,7 +507,7 @@ const menu = [
         price: 250,
         
         img: require("../../assets/vegs/BokChoi.jpg"),
-        perunit: '/bundle'
+        perunit: 'Ks/bundle'
       },
       {
         id: 57,
@@ -516,7 +516,7 @@ const menu = [
         price: 200,
         
         img: require("../../assets/vegs/Cilantro.jpg"),
-        perunit: '/bundle'
+        perunit: 'Ks/bundle'
       },
       {
         id: 58,
@@ -525,7 +525,7 @@ const menu = [
         price: 200 ,
         
         img: require("../../assets/vegs/Tomato.jpg"),
-        perunit: '/100g'
+        perunit: 'Ks/100g'
       },
       {
         id: 59,
@@ -534,9 +534,70 @@ const menu = [
         price: 100,
         
         img: require("../../assets/vegs/LadyFinger.jpg"),
-        perunit: '/5pieces'
+        perunit: 'Ks/5pieces'
       },
+    //sets------------------------------------------------------------
+    {
+      id: 60,
+      title: 'Beef Set',
+      category: 'Sets',
+      price: 8000,
       
+      img: require("../../assets/sets/Beef.jpg"),
+      perunit: 'Ks/Set',
+      Zoom:true
+    },
+    {
+      id: 61,
+      title: 'Chicken Set',
+      category: 'Sets',
+      price: 8000,
+      
+      img: require("../../assets/sets/Chicken.jpg"),
+      perunit: 'Ks/Set',
+      Zoom:true
+    },
+    {
+      id: 62,
+      title: 'Fish Set',
+      category: 'Sets',
+      price: 8000,
+      
+      img: require("../../assets/sets/Fish.jpg"),
+      perunit: 'Ks/Set',
+      Zoom:true
+    },
+    {
+      id: 63,
+      title: 'Mutton Set',
+      category: 'Sets',
+      price: 13000,
+      
+      img: require("../../assets/sets/Mutton.jpg"),
+      perunit: 'Ks/Set',
+      Zoom:true
+    },
+    {
+      id: 64,
+      title: 'Pork Set',
+      category: 'Sets',
+      price: 8000,
+      
+      img: require("../../assets/sets/Pork.jpg"),
+      perunit: 'Ks/Set',
+      Zoom:true
+    },
+    {
+      id: 65,
+      title: 'Prawn Set',
+      category: 'Sets',
+      price: 11000,
+      
+      img: require("../../assets/sets/Prawn.jpg"),
+      perunit: 'Ks/Set',
+      Zoom:true
+    }
+
       
   ]
   export default menu

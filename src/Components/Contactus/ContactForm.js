@@ -1,39 +1,135 @@
-// import React, { useState } from "react";
-import { FTCTbg, CTForm, HEADER2, Para, INPUTCT, CTinfordiv, CTsubmitbtn, SpanCT, CTContainer } from "./Contactelements";
+import { useEffect, useRef, useState } from "react";
+import {  CTForm, HEADER2, CTinfordiv, CTsubmitbtn, SpanCT, CTContainer, CTprompt, CTcontent, CTBtn, CTpromptdiv } from "./Contactelements";
+import emailjs from '@emailjs/browser';
+import { useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
+import * as yup from 'yup';
+import { FormHelperText, TextField } from "@mui/material";
 
-// const FORM_ENDPOINT = ""; // TODO - fill on the later step
+
 
 const ContactForm = () => {
-  // const [submitted, setSubmitted] = useState(false);
-  // const handleSubmit = () => {
-  //   setTimeout(() => {
-  //     setSubmitted(true);
-  //   }, 100);
-  // };
+  
 
-  // if (submitted) {
-  //   return (
-  //     <>
-  //       <h2>Thank you!</h2>
-  //       <div>We'll be in touch soon.</div>
-  //     </>
-  //   );
-  // }
+
+  const [Values, setValues] = useState({
+    name:'',
+    email:'',
+    message:'',
+    Prompted:false
+  });
+
+  const FormSchema = yup.object().shape({
+    name: yup.string().required(),
+    email: yup.string().email().required(),
+    message: yup.string().required(),
+
+});
+
+const { register, reset, handleSubmit, watch, formState:{errors} } = useForm({
+    resolver: yupResolver(FormSchema),
+})
+
+const Watchname = watch("name", false);
+const Watchemail = watch("email", false);
+const Watchmessage = watch("message", false);
+
+useEffect(()=>{
+    const Subscription = watch((value,{name, type})=>console.log(value, name, type));
+    return ()=> Subscription.unsubscribe();
+},[watch])
+
+const FForm = useRef();
+ const handleChange = (prop) => (event) => {
+        setValues({ ...Values, [prop]: event.target.value });
+      };
+
+const sendEmail = (e) => {
+        e.preventDefault();
+    
+        emailjs.sendForm('service_438j29p', 'contact_form', FForm.current, 'e_Kj3aGMgJDPVWzSz')
+          .then((result) => {
+              console.log(result.text);
+          }, (error) => {
+              console.log(error.text);
+          });
+
+      };
+
+
+
 
   return (
       <CTContainer>
       <CTForm
-
-      // action={FORM_ENDPOINT}
-      // onSubmit={handleSubmit}
-      // method="POST"
-      // target="_blank"
-    >
+        ref={FForm} 
+        onSubmit={handleSubmit(sendEmail)}
+        >
        <HEADER2>CONTACT US</HEADER2>
-        <Para type="Name:"><INPUTCT placeholder="Write your name here.."></INPUTCT></Para>
-        <Para type="Email:"><INPUTCT placeholder="Let us know how to contact you back.."></INPUTCT></Para>
-        <Para type="Message:"><INPUTCT placeholder="What would you like to tell us.."></INPUTCT></Para>
-        <CTsubmitbtn>Send Message</CTsubmitbtn>
+       <TextField
+            id="outlined-basic" 
+            label="Name" 
+            name='name'
+            onChange={handleChange('name')}
+            variant="outlined" 
+            margin="normal"
+            {...register('name')}
+        />
+            {errors.name && <FormHelperText error>{errors.name.message}</FormHelperText>}
+            
+        <TextField
+            id="outlined-basic" 
+            label="Email" 
+            name='email'
+            onInput={e=>setValues({...Values, email:e.target.value})}
+            onChange={handleChange('email')}
+            variant="outlined" 
+            margin="normal"
+            {...register('email')}
+        />
+            {errors.email && <FormHelperText error>{errors.email.message}</FormHelperText>}
+        
+        
+            <TextField 
+            id="outlined-basic" 
+            label="Your Message Here"  
+            variant="outlined" 
+            margin="normal" 
+            multiline
+            onChange={handleChange('message')}
+            sx={{input: {
+              color:'#fbae1a'
+            }}}
+            name='message'
+            rows={5} 
+            {...register('message')}
+        />
+        {errors.message && <FormHelperText error>{errors.message.message}</FormHelperText>}
+        <CTsubmitbtn 
+         onClick={()=>{
+          
+                  Watchname|| Watchemail|| Watchmessage ?setValues({...Values, Prompted:true}):
+                  console.log('fail form')}}
+  
+        >Send Message</CTsubmitbtn>
+
+        {
+          Values.Prompted?
+          <CTpromptdiv>
+            <CTprompt>
+              <CTcontent>
+                Thank you for contacting us. We will get back to you via your email {Values.email} within 5 business days.
+              </CTcontent>
+              <CTBtn onClick={()=>{
+                reset({name:'', email:'', message:''})
+                setValues({...Values, Prompted:false})
+              }}
+              >Back</CTBtn>
+            </CTprompt>
+          </CTpromptdiv>
+          :
+          <></>
+        }
 
         <CTinfordiv>
             <SpanCT class="fa fa-phone"></SpanCT>001 1023 567
@@ -41,7 +137,7 @@ const ContactForm = () => {
         </CTinfordiv>
     
     </CTForm>
-    <FTCTbg/>
+   
     </CTContainer>
   );
 };

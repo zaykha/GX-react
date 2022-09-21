@@ -36,7 +36,7 @@ export const NavLogo= styled(LinkS)`
     font-size: 1.3rem;
     display: flex;
     align-items: center;
-    margin-left: 24px;
+    // margin-left: 24px;
     font-weight: bold;
     text-decoration: none;
     filter: invert(75%) sepia(86%) saturate(2521%) hue-rotate(347deg) brightness(108%) contrast(97%);

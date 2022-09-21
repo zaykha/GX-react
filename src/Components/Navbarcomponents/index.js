@@ -1,5 +1,5 @@
 import React from 'react';
-import {FaBars, FaShoppingCart} from 'react-icons/fa';
+import {FaBars} from 'react-icons/fa';
 import { Nav, NavbarContainer, NavLogo, Imgicon, MobileIcon, NavMenu, NavItem, NavLinks } from './NavbarElements';
 const Navbar = ({togglesidebar}) => {
   return (

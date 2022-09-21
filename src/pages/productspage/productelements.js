@@ -1,17 +1,26 @@
 import styled from "styled-components";
 import { Link as LinkR } from "react-router-dom";
 
+
 export const Pdiv= styled.div`
     width: 100%;
-    background: #000;
+    background: linear-gradient( rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5) );
 `
-
+export const BGimg = styled.div`
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient( rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5) ),url(${require('../../assets/Herobackground.jpg')}) no-repeat;
+    background-size: cover;
+    background-position:center;
+`;
 export const PSection= styled.section`
-    width: 90vw;
+    width: 100%;
     margin: 0 auto;
     max-width: 1170px;
     padding: 5rem 0;
-    background-color: rgba(0,0,0,0);
+    background: 0;
     position:relative;
     top:-120px;
 
@@ -83,9 +92,10 @@ export const PArticlemenuitem = styled.article`
     display: grid;
     width: 480px;
     height: 153px;
-    
+    color: #fbae1a;
+
     border-radius: 5px;
-    background: url(${require('../../assets/bg4.jpg')}) no-repeat;
+    background: url(${require('../../assets/bg11.jpg')}) no-repeat;
     background-size: cover;
     background-position:center;
     grid-template-columns: 225px 1fr;
@@ -100,28 +110,25 @@ export const PArticlemenuitem = styled.article`
       background: url(${require('../../assets/bg8.jpg')}) no-repeat;
       background-size: cover;
       background-position:center;
-      color: white;
+      
       text-shadow: 1px 1px 1px black;
     }
 `;
 
-export const PIMGphoto = styled.img`
+
+export const PIMGphotoZ = styled.img`
     object-fit: cover;
     height: 150px;
     width: 240px;
     border: 1px solid black;
-    box-shadow:2px 2px black;
+    box-shadow: 2px 2px black;
     border-radius: 0.25rem;
     display: block;
-
-    // @media screen and (min-width:768px){
-    //     height: 175px;
-    // }
-
-    // @media screen and (min-width: 1200px){
-    //     height: 150px;
-    // }
+    // cursor: pointer;
+    
 `;
+
+
 
 export const Pdiviteminfo = styled.div`
     display: flex;
@@ -135,6 +142,7 @@ export const Pdiviteminfo = styled.div`
 export const PH4item = styled.h4`
     margin-left: 0.5rem;
     width: 50%;
+    color: #fbae1a;
    
 `;
 export const Pheader = styled.header`
@@ -227,6 +235,40 @@ export const PAnc = styled.a`
                 transform: translateY(0) scale(1,1);
     }
 `;
+
+export const Setdiv = styled.div`
+    position: relative;
+    margin: auto;
+    top:-1rem;
+
+    &:hover{
+        cursor:pointer;
+        color:white;  
+    }
+`
+export const ELcontainer = styled.div`
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.5);
+    color: #fbae1a;
+    z-index: 200;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+`;
+
+export const ELimg = styled.img`
+    width: 80%;
+    hieght: 50%;
+
+    &:hover{
+        cursor: pointer;
+    }
+`
+
 export const PSpan = styled.span`
     margin: 0 auto;
     transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
@@ -292,18 +334,25 @@ export const Minusbutton = styled.button`
 `;
 
 export const Addtocartbtn = styled.button`
-    position: relative;
-    width:120px;
-    height: 34px;
-    cursor: pointer;
-    margin:  auto;
-    border:none;
-    box-shadow: 1.5px 1.5px black;
-    background-color: #fbae1a;
+// float:right;
+width: 70%;
+padding:8px 12px;
+margin:auto;
+font-size: 1rem;
+// font-family:'Montserrat',sans-serif;
+border:1px solid #fbae1a;
+background:0;
+color:#fbae1a;
+cursor:pointer;
+transition:all .3s;
+border-radius: 15px;
+text-decoration: none;
 
-    &:hover{
-        box-shadow: 1px 1px black;
-    }
+&:hover{
+    background: rgba(0,0,0,0.3);
+    color:#fff;
+    border:1px solid black;
+
 `;
 
 export const Flexdiv = styled.div`
@@ -345,7 +394,7 @@ export const TTLdisplay = styled.div`
     // border: 1px solid red;
     text-align: center;
     margin: 20px auto;
-    background-color: rgba(0,0,0,0.8);
+    background-color: rgba(0,0,0,0.3);
     width: 100%;
     height: 30px;
     color: #fbae1a;
@@ -354,8 +403,12 @@ export const TTLdisplay = styled.div`
     font-size: 1.2rem;
     text-shadow: 1px 1px 1px black;
 
-    @media screen and (max-width: 768px){
+    @media screen and (max-width: 1200px){
         text-align: left;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        
     }
 `;
 
@@ -371,4 +424,11 @@ export const Checkoutdiv = styled(LinkR)`
      &:hover{
          color: green;
      }
+
+     @media screen and (max-width: 1200px){
+        position: relative;
+        top: 0;
+
+        
+    }
 `;

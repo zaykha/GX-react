@@ -27,7 +27,7 @@ const Landingproducts = () => {
       <PNAME>Exploring made Easy!</PNAME>
      <Lpcontentcontainer>
         {ProductHeaddingarr.map((product)=>(
-            <LPcontent key={product.id}>
+            <LPcontent to='/productspage' key={product.id}>
             <PImgpl src={product.src} alt={product.name} />
             <PNAME>{product.name}</PNAME>
             </LPcontent>

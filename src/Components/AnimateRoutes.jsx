@@ -7,6 +7,7 @@ import Cart from '../pages/Cart/cart';
 import { useState } from 'react';
 
 
+
 const AnimateRoutes = () => {
   const location = useLocation();
   const [basket, setBasket] = useState([]);
@@ -39,14 +40,17 @@ const AnimateRoutes = () => {
       setBasket(basket.filter((x) => x.id !== product.id));
     } 
   }
+
+
   return (
+    
     <Routes location={location} key={location.pathname}>
-      <Route path='/' element={<Homepage/>}/>
+      <Route path='/' element={<Homepage />}/>
       <Route path='/productspage' element={<Productspage ondelete={ondelete} basket={basket} onAdd={onAdd} onRemove={onRemove}/>}/>
       <Route path='/About' element={<About />}/>
       <Route path='/cart' element={<Cart ondelete={ondelete} basket={basket} onAdd={onAdd} onRemove={onRemove}/>}/>
-      
     </Routes>
+    
   )
 }
 

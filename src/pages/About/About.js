@@ -3,7 +3,7 @@ import Sidebar from "../../Components/Sidebar/Sidebar";
 import Navbar from "../../Components/Navbarcomponents";
 import ContactForm from "../../Components/Contactus/ContactForm";
 import Footer from "../../Components/Footer/Footer";
-import { InnerPara, InnerSustain, ImgAbt, Abtpara, Paracontainer, AbtCarouselcontainer, AbtImgContainer, Sustain, AbtcarCtner } from "./Aboutcomponents";
+import { AboutOuterDiv, InnerPara, InnerSustain, ImgAbt, Abtpara, Paracontainer, AbtCarouselcontainer, AbtImgContainer, Sustain, AbtcarCtner } from "./Aboutcomponents";
 import {Carousel} from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 const About = () => {
@@ -18,6 +18,7 @@ const togglesidebar = () => {
 
   return (
     <>
+    <AboutOuterDiv></AboutOuterDiv>
     <Sidebar isOpen={isOpen} togglesidebar={togglesidebar}/>
        <Navbar togglesidebar={togglesidebar}/>
        <ImgAbt/>
@@ -66,7 +67,7 @@ const togglesidebar = () => {
         </Abtpara>
         <AbtcarCtner>
         <AbtCarouselcontainer>
-            <Carousel>
+            <Carousel showThumbs={false}>
 
             <AbtImgContainer src={require('../../assets/Aboutpics/abt1.jpg')} alt='heromeat'/>
             <AbtImgContainer src={require('../../assets/Aboutpics/abt2.jpg')} alt='heromeat'/>    

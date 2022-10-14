@@ -72,7 +72,7 @@ export const Herodiv = styled.div`
 export const HeroPhrase = styled.h1`
         z-index: 1;
         
-        font-size:3rem;
+        font-size:2rem;
         position:relative;
        
         // margin: auto;

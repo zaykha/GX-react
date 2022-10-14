@@ -8,7 +8,7 @@ const Navbar = ({togglesidebar}) => {
         <NavbarContainer>
             <NavLogo to='/'>
               <Imgicon>
-                <img src={require('../../assets/android-chrome-192x192.png')} alt='logo' width='100px' />
+                <img src={require('../../assets/android-chrome-192x192.png')} alt='logo' width='90px' />
                 </Imgicon>
             </NavLogo>
                 <MobileIcon onClick={togglesidebar}>
